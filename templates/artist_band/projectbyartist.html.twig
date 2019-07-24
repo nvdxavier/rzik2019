@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for userinfos in user %}
+        {{ dump(userinfo) }}
+    {% endfor %}
+
+    <div id="artistproject">
+        {% for projectid in projectbyuser %}
+            <div id="bobo" :data-name="{{ projectid.id }}" ref="lol"></div>
+        {% endfor %}
+        {#        <i>${ this.info }</i>#}
+        {#<dump :data="data.id" label="The User 👨‍🎨"></dump>#}
+
+        <template>
+            <div class="container">
+                <div role="tablist">
+                    <div v-for="data in this.info.data" class="currency">
+
+                        <b-card no-body class="col-lg-12">
+                            <b-card-header header-tag="header" class="col-lg-12" role="tab">
+                                <b-button block href="#" v-b-toggle="'accordion-' + data.id" variant="info">
+                                    <img :src="'https://localhost/rzik/' + data.mainpictureplproject.picturefile"
+                                         alt="">
+                                    <h4>${data.plprojectname}</h4>
+                                </b-button>
+                            </b-card-header>
+                            <div class="col-lg-8">
+                                <b-collapse :id="'accordion-' + data.id" visible accordion="my-accordion"
+                                            role="tabpanel">
+                                    <b-card-body>
+                                        <div v-for="(value, key) in data.musicfileplproject">
+                                            <b-card-text>
+                                                <b-button v-b-modal="'modal-' + value.id">
+                                                    ${value.filetitle}
+                                                </b-button>
+                                                <b-modal :id="'modal-' + value.id" :title="value.filetitle">
+                                                    <av-bars :audio-src="'https://localhost/rzik/' + value.filename">
+                                                        ${value.filename}
+                                                    </av-bars>
+                                                </b-modal>
+                                            </b-card-text>
+                                        </div>
+                                    </b-card-body>
+                                </b-collapse>
+                            </div>
+                        </b-card>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+{% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('build/artistbandproject.js') }}"></script>
+    {% endblock %}

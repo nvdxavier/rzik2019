@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block title %}Welcome Home{% endblock %}
+{% block body %}
+    <div id="monthlyproject">
+        <div>
+            <b-card-group deck>
+                {% for monthlyproject in monthlyProjects %}
+
+                    <b-card title="{{ monthlyproject.artistbandplproject.artistbandname }}"
+                            img-src="{{ asset('/rzik/'~monthlyproject.mainpictureplproject.picturefile) }}"
+                            img-alt="{{ monthlyproject.artistbandplproject.artistbandname }}"
+                            img-top>
+
+                        <b-card-text>
+                            {{ monthlyproject.descriptionplproject }}
+                        </b-card-text>
+                        <b-link href="{{ path('project_byartist', { 'id' : monthlyproject.id}) }}">view more</b-link>
+
+                        <div slot="footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </b-card>
+
+                {% endfor %}
+            </b-card-group>
+        </div>
+    </div>
+{% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('build/home.js') }}"></script>
+    {% endblock %}

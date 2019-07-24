@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="row">
+    <div class="tabcontent">
+        <h2><i class="fa fa-phone"></i> playlist</h2>
+<div class="container">
+    {% if app.session.flashbag is defined %}
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div id="myModalContact" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="flash-notice alert alert-success alert-dismissable col-lg-10 col-md-10 col-sm-1 col-xs-10 col-lg-push-7">
+                        <i class="fa fa-check"></i>
+                        {{ flashMessage }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% for flashMessage in app.session.flashbag.get('danger') %}
+            <div id="myModalContact" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="flash-notice alert alert-danger alert-dismissable col-lg-10 col-md-10 col-sm-1 col-xs-10 col-lg-push-7">
+                        <i class="fa fa-check"></i>
+                        {{ flashMessage }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+        {{ form_start(formplaylist, {attr: {role: 'form'}}) }}
+        {{ form_errors(formplaylist) }}
+
+                            <div class="box-body demande_form_box col-md-4">
+                                <div class="form-group">
+                                    {{ form_label(formplaylist.plname, 'Nom') }}
+                                    <div class="input-group">
+                                        {{ form_widget(formplaylist.plname, {attr: {class: 'form-control'}}) }}
+                                        <div class="red">
+                                            {{ form_errors(formplaylist.plname) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+        {{ form_rest(formplaylist) }}
+ {{ form_end(formplaylist) }}
+   {%  endblock %}
+
+
+
+        {%  block javascripts %}
+        {{ parent() }}
+            <script type="text/javascript">
+                    $(function() {
+                    function runEffect() {
+                        // run the effect
+                        $( "#playlistdatecreatepl" ).toggle( "blind", 500 );
+                    }
+                      var dateToday = $.datepicker.formatDate('dd/mm/yy', new Date());
+                        $('#playlistdatecreatepl').datepicker($.datepicker.regional[ "fr" ]);
+                        if ($('#playlistdatecreatepl').val() == "") {
+                            $('#playlistdatecreatepl').val(dateToday);
+                        }
+                    });
+            </script>
+        {%  endblock %}

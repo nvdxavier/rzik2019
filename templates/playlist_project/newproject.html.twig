@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Project Controller!{% endblock %}
+
+{% block body %}
+    <h1>CREATION OF YOUR PROJECT</h1>
+    <p></p>
+
+    <h2>your actual artist/band name</h2>
+    <div>{{ artistBand.artistbandname }}</div>
+    <div>{{ artistBand.artistbanddescription }}</div>
+    <div>{{ artistBand.artistbanddateceation|date("d/m/Y") }}</div>
+    <div>{{ artistBand.artistbandfacebook }}</div>
+    <div>{{ artistBand.artistbandtwitter }}</div>
+    <div>{{ artistBand.artistbandinstagram }}</div>
+    <div>{{ artistBand.artistbandcountry }}</div>
+    <div>{{ artistBand.artistbandcity }}</div>
+    <div>{{ artistBand.artistbandcategory }}</div>
+
+    <p></p>
+    <div id="newprojectform">
+        <div class="container-fluid">
+            <div class="form-group">
+                {{ form_start(formProject, {attr: {role: 'form'}}) }}
+                <div v-show="step === 1">
+                    <div>
+                        <h5>{{ form_label(formProject.plprojectname) }}</h5>
+                        {{ form_widget(formProject.plprojectname, {'attr': {
+                            class: 'form-control col-md-4 mb-3',
+                            'v-model': 'plname',
+                        }}) }}
+                        <div class="red">
+                            {{ form_errors(formProject.plprojectname) }}
+                        </div>
+                    </div>
+                    <div>
+                        <h5>{{ form_label(formProject.datecreateplproject) }}</h5>
+                        {{ form_widget(formProject.datecreateplproject, {attr: {class: 'form-control col-md-4 mb-3'}}) }}
+                        <div class="red">
+                            {{ form_errors(formProject.datecreateplproject) }}
+                        </div>
+                    </div>
+                    <div>
+                        <h5>{{ form_label(formProject.descriptionplproject) }}</h5>
+                        {{ form_widget(formProject.descriptionplproject, {attr: {class: 'form-control', 'v-model': 'descriptionpl'}}) }}
+                        <div class="red">
+                            {{ form_errors(formProject.descriptionplproject) }}
+                        </div>
+                    </div>
+                    <div>
+                        <h5>{{ form_label(formProject.mainpictureplproject) }}</h5>
+                        {{ form_widget(formProject.mainpictureplproject, {attr: {class: 'form-control form-control-file',
+                            '@change':'onFileChange($event)',
+                        }}) }}
+                        <div class="red">
+                            {{ form_errors(formProject.mainpictureplproject) }}
+                        </div>
+                    </div>
+                </div>
+                <div v-show="step === 2">
+                    <hr>
+                    <h3>PICTURES OF YOUR PROJECT</h3>
+                    <h5>{{ form_label(formProject.picturesplproject.vars.prototype) }}</h5>
+                    <div class="custom-file">
+                        <div id="picturefile"
+                             data-prototype="{{ form_widget(formProject.picturesplproject.vars.prototype)|e('html_attr') }}">
+                            <div class="red">
+                                {{ form_errors(formProject.picturesplproject.vars.prototype|e('html_attr')) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div v-show="step === 3">
+                    <hr>
+                    <h3>MUSICS OF YOUR PROJECT</h3>
+                    <h5>{{ form_label(formProject.musicfileplproject.vars.prototype|e('html_attr')) }}</h5>
+                    <div id="musicfile"
+                         data-prototype="{{ form_widget(formProject.musicfileplproject.vars.prototype)|e('html_attr') }}">
+                        <div class="red">
+                            {{ form_errors(formProject.musicfileplproject.vars.prototype) }}
+                        </div>
+                    </div>
+                </div>
+                <div v-show="step === 4">
+                    {{ form_widget(formProject.save, { 'label': 'Save my project' }) }}
+                </div>
+                {{ form_end(formProject) }}
+
+                <b-button block variant="primary" v-if="step != 1" @click.prevent="prev()">Previous</b-button>
+                <b-button block variant="primary" v-if="step <= 3" v-show="projectbuttonnext" @click.prevent="next()">
+                    Next
+                </b-button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/newprojectformregularjs.js') }}"></script>
+    <script src="{{ asset('build/newprojectform.js') }}"></script>
+{% endblock %}

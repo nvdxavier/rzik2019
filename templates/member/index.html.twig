@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome {{ user }}{% endblock %}
+
+{% block body %}
+    <div id="blockmember">
+        {#{% if formArticle is not null %}#}
+
+        {#<div>#}
+        {#<b-button v-b-modal.modal-1>Créer une news</b-button>#}
+
+        {#<!-- Modal Component -->#}
+        {#<b-modal id="modal-1" title="BootstrapVue">#}
+        {#<p class="my-4">#}
+        {#{{ form_start(formArticle) }}#}
+        {#{{ form_rest(formArticle) }}#}
+        {#{{ form_end(formArticle) }}#}
+        {#</p>#}
+        {#</b-modal>#}
+        {#</div>#}
+        {#{% endif %}#}
+
+        <form id="app" v-on:submit.prevent="buttonClicked" method="post">
+            <p>
+                <label for="title">title</label>
+                <input id="title" v-model="title" type="text" name="title">
+            </p>
+            <p>
+                <label for="content">content</label>
+                <input id="content" v-model="content" type="text" name="content">
+            </p>
+            <p>
+                <label for="tag">tag</label>
+                <input id="tag" v-model="tag" type="text" name="tag">
+            </p>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="example-wrapper">
+            <h1>Hello {{ controller_name }}! ✅</h1>
+
+            This friendly message is coming from:
+            <ul>
+                <li>Your controller at <code><a
+                                href="{{ '/home/xnguyen/Public/rzik2019v3/symfony/src/Controller/MemberController.php'|file_link(0) }}">src/Controller/MemberController.php</a></code>
+                </li>
+                <li>Your template at <code><a
+                                href="{{ '/home/xnguyen/Public/rzik2019v3/symfony/templates/member/index.html.twig'|file_link(0) }}">templates/member/index.html.twig</a></code>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('build/viewmember.js') }}"></script>
+    {% endblock %}

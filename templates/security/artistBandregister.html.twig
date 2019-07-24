@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artist Band Register !{% endblock %}
+
+{% block body %}
+
+    <div id="artistbandregister">
+
+    </div>
+
+
+    {#<form method="post">#}
+    {#<h1 class="h3 mb-3 font-weight-normal">Register</h1>#}
+    {#<label for="inputNomComplet" class="sr-only">Nom Complet</label>#}
+    {#<input type="text" name="Firstname" id="inputNomComplet" class="form-control" placeholder="Firstname" required autofocus>#}
+    {#<input type="text" name="Lastname" id="inputNomFamilleComplet" class="form-control" placeholder="Lastname" required autofocus>#}
+    {#<label for="inputEmail" class="sr-only">Email</label>#}
+    {#<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>#}
+    {#<select name="role">#}
+    {#<option value="ROLE_USER">Simple user</option>#}
+    {#<option value="ROLE_ARTIST">artist</option>#}
+    {#</select>#}
+    {#<label for="inputPassword" class="sr-only">Password</label>#}
+    {#<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>#}
+
+    {#<button class="btn btn-lg btn-primary" type="submit">#}
+    {#Register#}
+    {#</button>#}
+    {#</form>#}
+    <hr>
+    <h1>CREATE YOUR MUSIC PROJECT</h1>
+    {{ form_start(formArtistBand) }}
+
+    {{ form_label(formArtistBand.artistbandname) }}
+    {{ form_widget(formArtistBand.artistbandname) }}
+    {{ form_errors(formArtistBand.artistbandname) }}
+
+    {{ form_label(formArtistBand.artistbanddescription) }}
+    {{ form_widget(formArtistBand.artistbanddescription) }}
+    {{ form_errors(formArtistBand.artistbanddescription) }}
+
+    {{ form_label(formArtistBand.artistbanddateceation) }}
+    {{ form_widget(formArtistBand.artistbanddateceation) }}
+    {{ form_errors(formArtistBand.artistbanddateceation) }}
+
+
+    {{ form_label(formArtistBand.artistbandpicture.vars.prototype) }}
+    {{ form_widget(formArtistBand.artistbandpicture.vars.prototype) }}
+    {{ form_errors(formArtistBand.artistbandpicture.vars.prototype) }}
+
+
+    {{ form_label(formArtistBand.artistbandlogo.vars.prototype) }}
+    {{ form_widget(formArtistBand.artistbandlogo.vars.prototype) }}
+    {{ form_errors(formArtistBand.artistbandlogo.vars.prototype) }}
+
+
+    {{ form_rest(formArtistBand) }}
+    {{ form_end(formArtistBand) }}
+
+    {#<vue-bootstrap-typeahead#}
+    {#v-model="query"#}
+    {#:data="['Canada', 'USA', 'Mexico']"#}
+    {#/>#}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('build/viewtypeahead.js') }}"></script>
+{% endblock %}

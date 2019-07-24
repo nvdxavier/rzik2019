@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+    Hello World!
+    This is audio add page.
+
+{% for flashMessage in app.session.flashbag.get('message') %}
+    {{ flashMessage }}
+{% endfor %}
+
+    {{ form_start(formAudio) }}
+    {{ form_rest(formAudio) }}
+    {{ form_row(formAudio.audiofilename) }}
+    {{ form_row(formAudio.imagefilename) }}
+    {% if fileImgExists == 1 %}
+        <img src="{{ asset('uploads/' ~ fileImgName) }}" height="100" width="100">
+    {% endif %}
+    {{ form_end(formAudio) }}
+
+    <a href="{{ path('audio_homepage') }}">Back</a>
+
+{% endblock %}audio

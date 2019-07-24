@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+    {% block body %}
+        <div id="blockmusic">
+            <hello></hello>
+            <vuesuite></vuesuite>
+            <template v-if="ok">
+
+                {{ form_start(formNewFileAudio) }}
+
+                {{ form_label(formNewFileAudio.filename) }}
+                {{ form_widget(formNewFileAudio.filename) }}
+
+                {{ form_label(formNewFileAudio.filetitle) }}
+                {{ form_widget(formNewFileAudio.filetitle, { attr: {class: 'form-control'}}) }}
+
+                {{ form_label(formNewFileAudio.filedescription) }}
+                {{ form_widget(formNewFileAudio.filedescription, { attr: {class: 'form-control'}}) }}
+
+                {#{{ form_widget(formNewFileAudio.tags.vars.prototype.name)|e }}#}
+                {{ form_rest(formNewFileAudio) }}
+                {{ form_end(formNewFileAudio) }}
+                <h2>${ message }</h2>
+
+                <a v-bind:href="lien">login</a>
+                <a v-bind:href="'{{ path ('app_login') }}'" v-bind:class="Style1">Connection</a>
+
+                <div>${compteur}</div>
+                <button v-on:click="incrementation">+</button>
+                <button @click="decrementation">-</button>
+                <input type="text" v-model="visiteur">
+                <div>Bonjour ${visiteur}, bienvenu</div>
+
+                <template v-for="vices of mesHobbies">
+                    <template v-for="(value, key) in vices">
+                        <h5> ${ key } </h5>
+                        <p> ${ value }</p>
+                    </template>
+                </template>
+            </template>
+            <button @click="show()" ref="boutton">Cacher</button>
+        </div>
+
+
+
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('build/viewmusicfile.js') }}"></script>
+    {% endblock %}

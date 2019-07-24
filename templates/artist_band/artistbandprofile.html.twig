@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div id="artistbandprofile" data-name="{{ artistprofile.id }}">
+        {{ artistprofile.artistbandname }}
+        {{ artistprofile.artistbanddescription }}
+        {{ artistprofile.artistbanddateceation|date('d-m-y') }}
+        {{ artistprofile.artistbandcity }}
+        {{ artistprofile.artistbandcategory }}
+        {{ artistprofile.followedbymember }}
+        <b-button v-bind:variant="followstate" v-on:click="handlefollowstate">${followbuttontext}</b-button>
+    </div>
+{% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('build/artistbandprofile.js') }}"></script>
+    {% endblock %}
