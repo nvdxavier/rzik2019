@@ -4,7 +4,9 @@
     <option name="SPLITTER_PROPORTION" value="0.5292116" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ef1c3f3-ed1b-405a-b458-1425229eefb0" name="Default Changelist" comment="" />
+    <list default="true" id="6ef1c3f3-ed1b-405a-b458-1425229eefb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,8 +157,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiArtistBandController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="53" column="49" lean-forward="true" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+            <state relative-caret-position="244">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -231,7 +233,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="e19999b8-53ef-4f3a-9fc9-d57d699d0838" />
@@ -239,7 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/member/settings/profile.html" />
         <option value="$PROJECT_DIR$/src/Form/MemberType.php" />
         <option value="$PROJECT_DIR$/templates/security/login.html.twig" />
         <option value="$PROJECT_DIR$/templates/member/index.html.twig" />
@@ -290,6 +291,7 @@
         <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/assets/js/artistbandprofile.js" />
+        <option value="$PROJECT_DIR$/src/Form/PlaylistType.php" />
       </list>
     </option>
   </component>
@@ -452,6 +454,12 @@
               <item name="symfony" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -463,6 +471,7 @@
     <property name="ChangesTree.GroupingKeys" value="" />
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
@@ -472,7 +481,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -547,7 +556,7 @@
       <workItem from="1563489407517" duration="11174000" />
       <workItem from="1563543429849" duration="28391000" />
       <workItem from="1563659248129" duration="26298000" />
-      <workItem from="1564001368104" duration="4923000" />
+      <workItem from="1564001368104" duration="8222000" />
     </task>
     <task id="LOCAL-00001" summary="push for project global">
       <created>1563902630829</created>
@@ -570,11 +579,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563974339762</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test">
+      <created>1564009853373</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1564009853373</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1540402000" />
+    <option name="totallyTimeSpent" value="1543701000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -587,8 +603,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="25" width="1865" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49537894" visible="true" weight="0.18196811" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49537894" visible="true" weight="0.18196811" />
       <window_info id="Structure" order="1" sideWeight="0.5046211" side_tool="true" weight="0.15503024" />
       <window_info anchor="bottom" id="SVN Repositories" sideWeight="0.49972513" weight="0.32937366" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -602,7 +619,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" sideWeight="0.4997233" weight="0.32937366" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49917537" weight="0.32829374" />
       <window_info anchor="bottom" id="Favorites" order="10" weight="0.3297414" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49697635" visible="true" weight="0.4265659" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49697635" visible="true" weight="0.4265659" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5002749" side_tool="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32904884" />
       <window_info anchor="bottom" id="TypeScript" order="14" />
@@ -655,7 +672,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="push for project global" />
     <MESSAGE value="push for project global(i know ist a noobies massive push  but the purpose of this push is to focus on good practice and unit tests)." />
-    <option name="LAST_COMMIT_MESSAGE" value="push for project global(i know ist a noobies massive push  but the purpose of this push is to focus on good practice and unit tests)." />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -671,16 +689,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Entity/PlaylistProject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="152" column="42" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="42" />
-          <folding>
-            <element signature="e#30#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/rzik/Kiss/PICTURE_BAND/kiss-logo.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -965,10 +973,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/PlaylistType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#28#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiArtistBandController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="53" column="49" lean-forward="true" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+        <state relative-caret-position="244">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
