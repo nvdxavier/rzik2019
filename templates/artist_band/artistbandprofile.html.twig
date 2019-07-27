@@ -1,13 +1,18 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div id="artistbandprofile" data-name="{{ artistprofile.id }}">
+    <div id="artistbandprofile" data-name="{{ artistprofile.id }}" data-currentuser="{{ currentuserid }}">
+        {{ artistprofile.id }}
         {{ artistprofile.artistbandname }}
         {{ artistprofile.artistbanddescription }}
         {{ artistprofile.artistbanddateceation|date('d-m-y') }}
         {{ artistprofile.artistbandcity }}
         {{ artistprofile.artistbandcategory }}
-        {{ artistprofile.followedbymember }}
-        <b-button v-bind:variant="followstate" v-on:click="handlefollowstate">${followbuttontext}</b-button>
+        <b-button id="popover-button-sync" v-bind:variant="followstate" v-on:click="patchfollowstate">
+            ${followbuttontext}
+        </b-button>
+        <b-popover :show.sync="showpopover" target="popover-button-sync" :title="followartistmessage">
+            ${followartistmessage}
+        </b-popover>
     </div>
 {% endblock %}
     {% block javascripts %}

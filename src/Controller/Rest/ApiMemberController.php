@@ -1,24 +1,18 @@
 <?php
-
 namespace App\Controller\Rest;
 
-use App\Entity\{
-    Article,
-    Member
-};
-use App\Form\MemberType;
-use Doctrine\ORM\EntityNotFoundException;
 use Exception;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\View\View;
-use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use App\Entity\ArtistBand;
 use App\Entity\Playlist;
+use App\Entity\Member;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface;
 
@@ -139,9 +133,46 @@ class ApiMemberController extends FOSRestController
             return $request->get('password');
         } catch (Exception $e) {
             $this->addFlash('warning', $e->getMessage());
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('home');
         }
     }
 
+    /**
+     * @Rest\View()
+     * @Rest\Patch("/follow/artistband/{id}/{iduser}", requirements={"id": "\d+"})
+     */
+    public function patchFollowArtistband(int $id, int $iduser)
+    {
+        return $this->updateFollowArtistBand($id, $iduser);
+    }
+
+    /**
+     * @param int $id
+     * @param int $iduser
+     * @return Member|View|object|null
+     */
+    private function updateFollowArtistBand(int $id, int $iduser)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $member = $em->getRepository(Member::class)->find($iduser);
+        $artistbandtofollow = $em->getRepository(ArtistBand::class)->find($id);
+
+        /* @var $member Member */
+        if (empty($member)) {
+            return View::create(['message' => 'Member not found'], Response::HTTP_NOT_FOUND);
+        }
+
+        if ($member->getFollowartistband()->contains($artistbandtofollow) === true) {
+            $member->removeFollowartistband($artistbandtofollow);
+            $response = View::create(['message' => 'You do not follow this group anymore', 'followartistbandstate' => false], Response::HTTP_OK);
+
+        } else {
+            $member->getFollowartistband()->add($artistbandtofollow);
+            $response = View::create(['message' => 'This band has been added to your follow list', 'followartistbandstate' => true], Response::HTTP_CREATED);
+        }
+        $em->persist($member);
+        $em->flush();
+        return $response;
+    }
 
 }

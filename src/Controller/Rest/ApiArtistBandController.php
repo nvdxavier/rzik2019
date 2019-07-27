@@ -1,8 +1,7 @@
 <?php
-
-
 namespace App\Controller\Rest;
 
+use App\Repository\ArtistBandRepository;
 use Doctrine\ORM\EntityNotFoundException;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -56,13 +55,11 @@ class ApiArtistBandController extends FOSRestController
         if (!$artistband) {
             throw new EntityNotFoundException('this Artistband does not exist!');
         }
-
         return $this->handleView($this->view($artistband));
-
     }
 
     /**
-     * @Rest\Post("/follow/artistband/{id}", requirements={"id": "\d+"}, name="api_follow_artistband")
+     * @Rest\Post("/post/artistband/{id}", requirements={"id": "\d+"}, name="api_post_artistband")
      * @param int $id
      * @return JsonResponse
      */
@@ -79,4 +76,35 @@ class ApiArtistBandController extends FOSRestController
 
         return new JsonResponse(true);
     }
+
+    /**
+     * @Rest\View()
+     * @Rest\Patch("/patch/artistband/{id}", requirements={"id": "\d+"})
+     * @param int $id
+     */
+    public function patchArtistBand(int $id)
+    {
+        return $this->updateArtistBand($id);
+    }
+
+
+    private function updateArtistBand(int $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $artistband = $em->getRepository(ArtistBand::class)->find($id);
+        $formArtistBand = $this->createForm(ArtistBandRepository::class, $artistband);
+        /* @var $artistband ArtistBand */
+        if (empty($artistband)) {
+            return View::create(['message' => 'Artist or Band not found'], Response::HTTP_NOT_FOUND);
+        }
+
+        if ($formArtistBand->isSubmitted() && $formArtistBand->isValid()) {
+            $em->persist($artistband);
+            $em->flush();
+            return $artistband;
+        } else {
+            return $formArtistBand;
+        }
+    }
 }
+

@@ -12,8 +12,4 @@ class ControllerPlaylistProjectTest extends WebTestCase
         $client->request('GET', '/artist/new/project');
         $this->assertEquals(302, $client->getResponse()->getStatusCode());
     }
-
-
-
-
 }

@@ -75,7 +75,8 @@ class ArtistBand
      */
     private $artistbandpicture;
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Member", inversedBy="followartistband")
+     * @var ArrayCollection
+     * @ORM\ManyToMany(targetEntity="App\Entity\Member", mappedBy="followartistband")
      */
     private $followedbymember;
 
@@ -85,6 +86,7 @@ class ArtistBand
         $this->artistbandproject = new ArrayCollection();
         $this->artistbandpicture = new ArrayCollection();
         $this->artistbandlogo = new ArrayCollection();
+        $this->followedbymember = new ArrayCollection();
     }
 
 
@@ -303,7 +305,10 @@ class ArtistBand
         return $this;
     }
 
-    public function getFollowedbymember(): ?Member
+    /**
+     * @return Collection|Member[]
+     */
+    public function getFollowedbymember(): Collection
     {
         return $this->followedbymember;
     }
@@ -311,6 +316,26 @@ class ArtistBand
     public function setFollowedbymember(?Member $followedbymember): self
     {
         $this->followedbymember = $followedbymember;
+
+        return $this;
+    }
+
+    public function addFollowedbymember(Member $followedbymember): self
+    {
+        if (!$this->followedbymember->contains($followedbymember)) {
+            $this->followedbymember[] = $followedbymember;
+            $followedbymember->addFollowartistband($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFollowedbymember(Member $followedbymember): self
+    {
+        if ($this->followedbymember->contains($followedbymember)) {
+            $this->followedbymember->removeElement($followedbymember);
+            $followedbymember->removeFollowartistband($this);
+        }
 
         return $this;
     }

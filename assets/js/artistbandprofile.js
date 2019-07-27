@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import BootstrapVue from 'bootstrap-vue'
+import response from "vue-resource/src/http/response";
 
 Vue.use(BootstrapVue);
 
@@ -11,46 +12,45 @@ new Vue({
         followstate: null,
         followbuttontext: 'Follow',
         followartisturl: 'https://' + window.location.hostname + '/api/follow/artistband/',
-        getmemberid: ''
+        getartisturl: 'https://' + window.location.hostname + '/api/artistband/',
+        getmemberid: '',
+        getcurrentuser: '',
+        followartistmessage: null,
+        showpopover: false
     },
     beforeMount() {
         this.getmemberid = this.$el.attributes['data-name'].value;
+        this.getcurrentuser = this.$el.attributes['data-currentuser'].value;
     },
     mounted() {
-        if (!this.followstate) {
-            this.followstate = 'outline-primary';
-        }
+        if (response)
+            if (!this.followstate) {
+                this.followstate = 'outline-primary';
+            }
     },
     methods: {
-        handlefollowstate: function () {
-            axios.get(this.getmemberinfos)
-                .then(response => (this.infosuser = response));
-        },
-        postfollowstate: function () {
-            axios.post(this.followartisturl + this.getmemberid, {id: this.getmemberid})
+        patchfollowstate: function () {
+            axios.patch(this.followartisturl + this.getmemberid + '/' + this.getcurrentuser,
+                {
+                    id: this.getmemberid,
+                    iduser: this.getcurrentuser
+                })
                 .then((response) => {
-                    this.followbuttontext = 'Followed';
-                    console.log(response);
+                    if (response.data.followartistbandstate === true) {
+                        this.followstate = 'success';
+                        this.followbuttontext = 'Stop Follow';
+                    } else {
+                        this.followstate = 'outline-primary';
+                        this.followbuttontext = 'Follow';
+                    }
+                    this.showpopover = true;
+                    this.followartistmessage = response.data.message;
                 })
                 .catch((error) => {
                     console.log(error);
                     alert('non');
                 });
         },
-        // patchfollowstate: function(){
-        //     axios.patch(this.followartisturl + this.getmemberid,
-        //         {
-        //             id: this.getmemberid
-        //         })
-        //         .then((response) => {
-        //             console.log(response);
-        //             alert('success');
-        //         })
-        //         .catch((error) => {
-        //             console.log(error);
-        //             alert('non');
-        //         });
-        // },
 
     }
 });

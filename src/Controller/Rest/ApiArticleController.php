@@ -123,7 +123,6 @@ class ApiArticleController extends FOSRestController
 
         /* @var $article Article */
         if (empty($article)) {
-//            return new JsonResponse(['message' => 'articles not found'], Response::HTTP_NOT_FOUND);
             return \FOS\RestBundle\View\View::create(['message' => 'Article not found'], Response::HTTP_NOT_FOUND);
         }
 

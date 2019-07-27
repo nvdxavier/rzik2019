@@ -55,9 +55,9 @@ class Member implements UserInterface
     private $memberpicture;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\ArtistBand", mappedBy="followedbymember", cascade={"remove", "persist"})
+     * @ORM\ManyToMany(targetEntity="App\Entity\ArtistBand", inversedBy="followedbymember")
      */
-    private $followartistband;
+    protected $followartistband;
 
 
     public function __construct()
@@ -277,5 +277,10 @@ class Member implements UserInterface
         }
 
         return $this;
+    }
+
+    public function removeFollow(ArtistBand $followartistband)
+    {
+        $this->followartistband->removeElement($followartistband);
     }
 }

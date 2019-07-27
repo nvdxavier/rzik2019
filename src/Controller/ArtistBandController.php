@@ -40,7 +40,6 @@ class ArtistBandController extends AbstractController
             'mypicture' => $this->getUser()->getMemberPicture(),
             'artistprojects' => $artistprojectsbyuser,
         ]);
-
     }
 
     /**
@@ -51,10 +50,11 @@ class ArtistBandController extends AbstractController
         $em = $this->getDoctrine();
 
         $artistprofile = $em->getRepository(ArtistBand::class)->find($id);
+        $userid = $this->getUser()->getId();
 
-        dump($artistprofile);
         return $this->render('artist_band/artistbandprofile.html.twig', [
-            'artistprofile' => $artistprofile
+            'artistprofile' => $artistprofile,
+            'currentuserid' => $userid
         ]);
     }
 
