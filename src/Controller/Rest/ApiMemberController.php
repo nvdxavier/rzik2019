@@ -66,10 +66,9 @@ class ApiMemberController extends FOSRestController
 
     /**
      * @param Request $request
-     * @param $clearmissing
      * @return object|FormInterface|null
      */
-    private function updateMember(Request $request, $clearMissing)
+    private function updateMember(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -174,5 +173,26 @@ class ApiMemberController extends FOSRestController
         $em->flush();
         return $response;
     }
+
+    /**
+     * @Rest\View()
+     * @Rest\Get("/getstatus/artistband/{id}/{iduser}", requirements={"id": "\d+"})
+     * @param int $id
+     * @param int $iduser
+     */
+    public function getstatusFollowArtistband(int $id, int $iduser)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $member = $em->getRepository(Member::class)->find($iduser);
+        $artistbandtofollow = $em->getRepository(ArtistBand::class)->find($id);
+
+        if ($member->getFollowartistband()->contains($artistbandtofollow) === true) {
+            $response = View::create(['followartistbandstate' => false], Response::HTTP_OK);
+        } else {
+            $response = View::create(['followartistbandstate' => true], Response::HTTP_CREATED);
+        }
+        return $response;
+    }
+
 
 }

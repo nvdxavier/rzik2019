@@ -40,11 +40,6 @@ new Vue({
             axios.get(`https://localhost/api/search/city/${newQuery}`)
                 .then((res) => {
                     this.users = res.data[0];
-                    // this.users = res.data.items;
-                    // console.log(newQuery);
-                    // console.log(res.data.item);
-                    // console.log(res.data)
-                    // console.log(res.data[0]);
                 })
                 .catch((error) => {
                     console.log(error);

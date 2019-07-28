@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import axios from 'axios'
 import BootstrapVue from 'bootstrap-vue'
-import response from "vue-resource/src/http/response";
 
 Vue.use(BootstrapVue);
 
@@ -13,6 +12,7 @@ new Vue({
         followbuttontext: 'Follow',
         followartisturl: 'https://' + window.location.hostname + '/api/follow/artistband/',
         getartisturl: 'https://' + window.location.hostname + '/api/artistband/',
+        getstatustate: 'https://' + window.location.hostname + '/api/getstatus/artistband/',
         getmemberid: '',
         getcurrentuser: '',
         followartistmessage: null,
@@ -23,10 +23,7 @@ new Vue({
         this.getcurrentuser = this.$el.attributes['data-currentuser'].value;
     },
     mounted() {
-        if (response)
-            if (!this.followstate) {
-                this.followstate = 'outline-primary';
-            }
+        this.getfollowstate()
     },
     methods: {
         patchfollowstate: function () {
@@ -48,9 +45,23 @@ new Vue({
                 })
                 .catch((error) => {
                     console.log(error);
-                    alert('non');
                 });
         },
+        getfollowstate: function () {
+            axios.get(this.getstatustate + this.getmemberid + '/' + this.getcurrentuser)
+                .then((response) => {
+                    if (response.data.followartistbandstate === false) {
+                        this.followstate = 'success';
+                        this.followbuttontext = 'Stop Follow';
+                    } else {
+                        this.followstate = 'outline-primary';
+                        this.followbuttontext = 'Follow';
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
 
     }
 });
