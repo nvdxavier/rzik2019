@@ -42,4 +42,5 @@ security:
     - { path: ^/artist/band/register, roles: [ROLE_ARTIST, ROLE_ADMIN]}
     - { path: ^/artist/new/project, roles: [ROLE_ARTIST, ROLE_ADMIN]}
     - { path: ^/follow/artistband/$, roles: [ROLE_USER,ROLE_ARTIST, ROLE_ADMIN]}
-    - { path: ^/artistband/profile/$, roles: [ROLE_USER,ROLE_ARTIST, ROLE_ADMIN]}
+    - { path: ^/artistband/profile/, roles: [ROLE_USER,ROLE_ARTIST, ROLE_ADMIN]}
+    - { path: ^/music/acquisition, roles: [ROLE_USER,ROLE_ARTIST, ROLE_ADMIN]}

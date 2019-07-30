@@ -3,7 +3,8 @@ namespace App\Controller\Rest;
 
 use App\Repository\ArtistBandRepository;
 use Doctrine\ORM\EntityNotFoundException;
-use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
+use phpDocumentor\Reflection\DocBlock\Tags\Throws;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\Security\Core\Security;
@@ -14,7 +15,7 @@ use FOS\RestBundle\View\View;
 use App\Entity\PlaylistProject;
 use App\Entity\ArtistBand;
 
-class ApiArtistBandController extends FOSRestController
+class ApiArtistBandController extends AbstractFOSRestController
 {
     /**
      * @Rest\Get("/search/city/{city}", name="app_article")
@@ -39,6 +40,7 @@ class ApiArtistBandController extends FOSRestController
 
         if (!$projectsbyartist) {
             throw new EntityNotFoundException('project does not exist!');
+
         }
         return $this->handleView($this->view($projectsbyartist));
     }

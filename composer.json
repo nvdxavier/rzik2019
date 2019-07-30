@@ -40,7 +40,7 @@
         "symfony/css-selector": "4.1.*",
         "symfony/dotenv": "*",
         "symfony/maker-bundle": "^1.11",
-        "symfony/phpunit-bridge": "4.1.*",
+      "symfony/phpunit-bridge": "^4.3",
         "symfony/web-server-bundle": "^4.0"
     },
     "config": {

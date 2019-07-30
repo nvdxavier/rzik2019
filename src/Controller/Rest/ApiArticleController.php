@@ -3,7 +3,7 @@
 namespace App\Controller\Rest;
 
 use App\Form\ArticleType;
-use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -19,7 +19,7 @@ use Symfony\Component\Serializer\SerializerInterface;
 use App\Entity\Tag;
 use App\Service\ApiService;
 
-class ApiArticleController extends FOSRestController
+class ApiArticleController extends AbstractFOSRestController
 {
     /** @var SerializerInterface */
     private $serializer;

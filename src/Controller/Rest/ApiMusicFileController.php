@@ -4,7 +4,7 @@ namespace App\Controller\Rest;
 
 use App\Entity\Member;
 use App\Form\MusicFileType;
-use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use FOS\RestBundle\Controller\Annotations as FOSRest;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,7 +22,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
  *
  * @FOSRest\RouteResource("ApiMusicFile",pluralize=false)
  */
-class ApiMusicFileController extends FOSRestController implements ClassResourceInterface
+class ApiMusicFileController extends AbstractFOSRestController implements ClassResourceInterface
 {
 
     /**

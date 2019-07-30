@@ -2,7 +2,7 @@
 namespace App\Controller\Rest;
 
 use Exception;
-use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\View\View;
 use Symfony\Component\Form\FormInterface;
@@ -17,7 +17,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface;
 
 
-class ApiMemberController extends FOSRestController
+class ApiMemberController extends AbstractFOSRestController
 {
 
     /**
