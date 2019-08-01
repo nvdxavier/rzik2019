@@ -56,4 +56,5 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
             array('/edit_playlist'),
         );
     }
+
 }

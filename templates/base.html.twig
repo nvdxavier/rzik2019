@@ -42,8 +42,9 @@
                         <b-nav-item-dropdown right>
                             <!-- Using 'button-content' slot -->
                             {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                                <template slot="button-content"><em><a href="{{ path('app_login') }}">Login</a></em>
-                                </template>
+                                <template slot="button-content"><em>Connexion</em></template>
+                                <b-dropdown-item href="{{ path('app_login') }}">Login</b-dropdown-item>
+                                <b-dropdown-item href="{{ path('app_register') }}">Register</b-dropdown-item>
                             {% else %}
                                 <template slot="button-content"><em>User</em></template>
                                 <b-dropdown-item href="{{ path('rzik_edit_profile') }}">Profile</b-dropdown-item>

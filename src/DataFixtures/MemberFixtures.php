@@ -19,10 +19,9 @@ class MemberFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
-        // On configure dans quelles langues nous voulons nos données
+        $role = [["ROLE_ARTIST"], ["ROLE_USER"]];
         $faker = Faker\Factory::create('fr_FR');
 
-        // on créé 10 users
         for ($i = 0; $i < 10; $i++) {
             $user = new Member();
             $user->setLastname($faker->name);
@@ -32,6 +31,9 @@ class MemberFixtures extends Fixture
                 $user,
                 'userdemo'
             ));
+
+            $key = array_rand($role);
+            $user->setRoles($role[$key]);
             $manager->persist($user);
         }
 

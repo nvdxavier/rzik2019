@@ -2,6 +2,10 @@ default:
     suites:
         default:
             contexts:
+                - ORMContext:
+                    doctrine: "@doctrine"
+                    manager: "@doctrine.orm.entity_manager"
+                    connection: "@doctrine.dbal.connection"
                 - FeatureContext:
                     kernel: '@kernel'
 
