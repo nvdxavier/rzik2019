@@ -2,13 +2,10 @@
 
 namespace App\Controller;
 
-use App\Form\MemberType;
 use Exception;
-use phpDocumentor\Reflection\Types\Void_;
 use Swift_Mailer;
 use Swift_Message;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,7 +16,6 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use App\Events\Events;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\GenericEvent;
-use App\Entity\Picture;
 use App\Entity\Member;
 use App\Entity\ArtistBand;
 use App\Form\ArtistBandType;
@@ -44,11 +40,11 @@ class SecurityController extends AbstractController
      */
     public function logout()
     {
-        return $this->redirectToRoute('user_login');
+        return $this->redirectToRoute('app_login');
     }
 
     /**
-     * @Route("/user/register", name="app_register")
+     * @Route("/register", name="app_register")
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
@@ -110,7 +106,6 @@ class SecurityController extends AbstractController
      */
     public function forgottenPassword(
         Request $request,
-        UserPasswordEncoderInterface $encoder,
         Swift_Mailer $mailer,
         TokenGeneratorInterface $tokenGenerator): Response
     {
@@ -125,7 +120,7 @@ class SecurityController extends AbstractController
 
             if ($user === null) {
                 $this->addFlash('danger', 'Email Inconnu');
-                return $this->redirectToRoute('homepage');
+                return $this->redirectToRoute('home');
             }
             $token = $tokenGenerator->generateToken();
 
@@ -134,7 +129,7 @@ class SecurityController extends AbstractController
                 $entityManager->flush();
             } catch (Exception $e) {
                 $this->addFlash('warning', $e->getMessage());
-                return $this->redirectToRoute('homepage');
+                return $this->redirectToRoute('home');
             }
 
             $url = $this->generateUrl('app_reset_password', array('token' => $token), UrlGeneratorInterface::ABSOLUTE_URL);
@@ -151,7 +146,7 @@ class SecurityController extends AbstractController
 
             $this->addFlash('notice', 'Mail envoyé');
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('security/forgotten_password.html.twig');
@@ -167,7 +162,7 @@ class SecurityController extends AbstractController
 
             $entityManager = $this->getDoctrine()->getManager();
 
-            $user = $entityManager->getRepository(Member::class)->findOneByResetToken($token);
+            $user = $entityManager->getRepository(Member::class)->findOneBy(["resetToken" => $token]);
             /* @var $user Member */
 
             if ($user === null) {
@@ -206,7 +201,7 @@ class SecurityController extends AbstractController
 
         if ($user === null) {
             $this->addFlash('danger', 'Utilisateur Inconnu');
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('home');
         }
         $token = $tokenGenerator->generateToken();
 
@@ -218,7 +213,7 @@ class SecurityController extends AbstractController
 
         } catch (Exception $e) {
             $this->addFlash('warning', $e->getMessage());
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('home');
         }
     }
 

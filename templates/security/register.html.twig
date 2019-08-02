@@ -3,28 +3,62 @@
 {% block title %}Register !{% endblock %}
 
 {% block body %}
-    <form method="post">
+    <div id="register">
+        <b-container class="bv-example-row">
+            <p></p>
+            <b-row>
+                <b-col></b-col>
+                <b-col cols="8">
+                    <form method="post">
+                        <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+                        <label for="inputNomComplet" class="sr-only">Nom Complet</label>
+                        <input type="text" name="Firstname" id="inputNomComplet" class="form-control"
+                               placeholder="Firstname" required
+                               autofocus>
+                        <p></p>
+                        <input type="text" name="Lastname" id="inputNomFamilleComplet" class="form-control"
+                               placeholder="Lastname"
+                               required autofocus>
+                        <p></p>
+                        <label for="inputEmail" class="sr-only">Email</label>
+                        <input type="email" name="email" id="inputEmail" class="form-control"
+                               placeholder="Email" required autofocus>
+                        <p></p>
+                        {#                        <select name="role">#}
+                        {#                            <option value="ROLE_USER">Simple user</option>#}
+                        {#                            <option value="ROLE_ARTIST">artist</option>#}
+                        {#                        </select>#}
+                        {#                        <b-form-select v-model="selected" :options="options" class="mb-3">#}
+                        {#                            <option :value="null" disabled>-- Select your type of account --</option>#}
+                        {#                            <option value="ROLE_USER">Account has fan</option>#}
+                        {#                            <option value="ROLE_ARTIST">Account has artist</option>#}
+                        {#                        </b-form-select>#}
 
-        <h1 class="h3 mb-3 font-weight-normal">Register</h1>
-        <label for="inputNomComplet" class="sr-only">Nom Complet</label>
-        <input type="text" name="Firstname" id="inputNomComplet" class="form-control" placeholder="Firstname" required
-               autofocus>
-        <input type="text" name="Lastname" id="inputNomFamilleComplet" class="form-control" placeholder="Lastname"
-               required autofocus>
-        <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-        <select name="role">
-            <option value="ROLE_USER">Simple user</option>
-            <option value="ROLE_ARTIST">artist</option>
-        </select>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <b-form-group label="-- Select your type of account --">
+                            <b-form-radio v-model="selected" name="role" value="ROLE_USER">Account has fan
+                            </b-form-radio>
+                            <b-form-radio v-model="selected" name="role" value="ROLE_ARTIST">Account has artist
+                            </b-form-radio>
+                        </b-form-group>
+                        <p></p>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" name="password" id="inputPassword" class="form-control"
+                               placeholder="Password" required>
+                        <p></p>
+                        <button class="btn btn-lg btn-primary" type="submit">
+                            Register
+                        </button>
+                    </form>
+                </b-col>
+                <b-col></b-col>
+            </b-row>
 
-        <button class="btn btn-lg btn-primary" type="submit">
-            Register
-        </button>
-    </form>
+        </b-container>
+    </div>
+
 {% endblock %}
 
 {% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/register.js') }}"></script>
 {% endblock %}

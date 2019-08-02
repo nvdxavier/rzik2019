@@ -21,7 +21,6 @@ new Vue({
     data: {
         info: null,
         projectid: '#projectbyartist',
-        // url: "https://localhost/api/artistband/projects/",
         url: 'https://' + window.location.hostname + '/api/artistband/projects/',
         paramValue: window.location.pathname.substr(1).split('/')[2],
         dismissSecs: 10,

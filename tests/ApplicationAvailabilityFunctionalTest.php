@@ -37,7 +37,7 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
             array('/login'),
             array('/forgottenPassword'),
             array('/home'),
-            array('/user/register'),
+            array('/register'),
             array('/create/article'),
             array('/playlist'),
             array('/playlist/project'),

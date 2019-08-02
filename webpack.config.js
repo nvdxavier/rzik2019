@@ -7,6 +7,8 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
     .enableVersioning(Encore.isProduction())
     .addEntry('app', './assets/js/main.js')
+    .addEntry('login', './assets/js/login.js')
+    .addEntry('register', './assets/js/register.js')
     .addEntry('musicfile', './assets/js/musicfile.js')
     .addEntry('viewmusicfile', './assets/js/viewmusicfile.js')
     .addEntry('viewmember', './assets/js/viewmember.js')
