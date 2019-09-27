@@ -4,18 +4,55 @@
     <option name="SPLITTER_PROPORTION" value="0.5292116" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ef1c3f3-ed1b-405a-b458-1425229eefb0" name="Default Changelist" comment="clean up somme dead routes, repository, controller">
-      <change afterPath="$PROJECT_DIR$/assets/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/register.js" afterDir="false" />
+    <list default="true" id="6ef1c3f3-ed1b-405a-b458-1425229eefb0" name="Default Changelist" comment="new refactoring">
+      <change afterPath="$PROJECT_DIR$/assets/js/settingsprofileartist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Rest/ApiPlaylistProjectController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/AbstractAliceFixture.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/ArtistBandFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/PlaylistProjectFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/artistbandfixtures.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/memberfixtures.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/musicfileplprojectfixtures.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ORM/playlistprojectfixtures.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/member/settings/profile_artist.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/artistbandprofile.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/artistbandprofile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/artistbandproject.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/artistbandproject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Hello.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/VueProjectForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/projectbyartist.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/projectbyartist.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/viewmember.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/viewmember.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/viewmusicfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/viewmusicfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/viewtypeahead.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/viewtypeahead.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArtistBandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArtistBandController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MemberController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PlaylistProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlaylistProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Rest/ApiArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Rest/ApiArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Rest/ApiArtistBandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Rest/ApiArtistBandController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Rest/ApiMemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Rest/ApiMemberController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Rest/ApiMusicFileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Rest/ApiMusicFileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/MemberFixtures.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ArtistBand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ArtistBand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Member.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Member.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PlaylistType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PlaylistType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PlaylistProjectRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PlaylistProjectRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artist_band/artistbandprofile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist_band/artistbandprofile.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/artist_band/projectbyartist.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/artist_band/projectbyartist.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/playlist_project/projectbyartist.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/playlist_project/projectbyartist.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/register.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/AbstractWebTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AbstractWebTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ApplicationAvailabilityFunctionalTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ApplicationAvailabilityFunctionalTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,7 +131,17 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="member: table" type="69fad909:PgImplModel$LocalTable" />
+        <item name="artist_band: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rzikproject@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rzikproject: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="playlist_project: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
     </expand>
     <select />
@@ -105,58 +152,79 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataFixtures/MemberFixtures.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiMemberController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state relative-caret-position="405">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
-                <element signature="e#36#58#0#PHP" expanded="true" />
+                <element signature="e#38#52#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/PlaylistProjectController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+              <folding>
+                <element signature="e#34#60#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/MemberController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-721">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#1331#1373#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiArticleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="129">
+              <caret line="136" column="9" lean-forward="true" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
               <folding>
-                <element signature="e#34#48#0#PHP" expanded="true" />
-                <element signature="e#2706#2735#1#PHP" expanded="true" />
-                <element signature="e#4573#4579#1#PHP" expanded="true" />
-                <element signature="e#4902#4908#1#PHP" expanded="true" />
-                <element signature="e#5516#5522#1#PHP" expanded="true" />
-                <element signature="e#7266#7272#1#PHP" expanded="true" />
-                <element signature="e#7724#7730#1#PHP" expanded="true" />
+                <element signature="e#39#64#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/AbstractWebTestCase.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiPlaylistProjectController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+            <state relative-caret-position="225">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <folding>
+                <element signature="e#39#70#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/MemberRepository.php">
+        <entry file="file://$PROJECT_DIR$/src/Entity/PlaylistProject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="218">
+              <caret line="67" column="32" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/security/register.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/artist_band/artistbandprofile.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="118" selection-start-line="30" selection-start-column="118" selection-end-line="30" selection-end-column="118" />
+            <state relative-caret-position="284">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
               </folding>
@@ -165,34 +233,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/security/login.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
+            <state relative-caret-position="-216">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/login.js">
+        <entry file="file://$PROJECT_DIR$/assets/js/artistbandprofile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/register.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="195">
+              <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -214,36 +267,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>post_max_size</find>
-      <find>assertClassHasAttribute</find>
-      <find>doctrine.orm</find>
-      <find>doctrine.dbal</find>
-      <find>DBALException</find>
-      <find>$metaData</find>
-      <find>getFixtures</find>
-      <find>octrine.dbal</find>
-      <find>getFixture</find>
-      <find>$teamMember</find>
-      <find>setRoles</find>
-      <find>AbstractAliceFixture</find>
-      <find>container</find>
-      <find>firstName</find>
-      <find>welcome</find>
-      <find>rzik_profile</find>
-      <find>setUp(</find>
-      <find>loadFixtures</find>
-      <find>loadfixture</find>
-      <find>load</find>
-      <find>loadFixture</find>
-      <find>getFRR</find>
-      <find>welcom</find>
-      <find>app_login</find>
-      <find>setUp</find>
-      <find>findOneByResetToken</find>
-      <find>home</find>
-      <find>user/register</find>
-      <find>AbstractWebTestCase</find>
-      <find>homepage</find>
+      <find>&lt;div v-for=&quot;data in this.infos.data&quot; class=&quot;currency&quot;&gt;</find>
+      <find>asset('build/artistbandproject.js')</find>
+      <find>artistband/profile</find>
+      <find>follow</find>
+      <find>follow/artistband</find>
+      <find>getFollowartistband</find>
+      <find>getmemberid</find>
+      <find>iduser</find>
+      <find>followartistmessage</find>
+      <find>showpopoverlog</find>
+      <find>login</find>
+      <find>viewprojectbyartist</find>
+      <find>projectByArtist</find>
+      <find>{% set</find>
+      <find>first</find>
+      <find>img</find>
+      <find>asset</find>
+      <find>data</find>
+      <find>currentuserid</find>
+      <find>Member</find>
+      <find>getstatustate</find>
+      <find>service</find>
+      <find>Bundle</find>
+      <find>AppBundle</find>
+      <find>artistBandProfileAction</find>
+      <find>artistbandplproject</find>
+      <find>projectdId</find>
+      <find>PlaylistProject</find>
+      <find>&lt;dump</find>
+      <find>getstatus/artistband</find>
     </findStrings>
     <replaceStrings>
       <replace>formNewUser</replace>
@@ -255,6 +308,11 @@
       <replace>$addMusicButton</replace>
       <replace>$member</replace>
       <replace>home</replace>
+      <replace>artist</replace>
+      <replace>$argon2i$v=19$m=1024,t=2,p=2$U2F3aEUxN0FUSFlWLmcvaw$Oxz2p73uDSbgxegGAkcjLQNG7tXPf0KtSGZywFitxCo</replace>
+      <replace>&lt;escape(password())&gt;</replace>
+      <replace>&lt;password()&gt;</replace>
+      <replace>getartistbandid</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/Migrations</dir>
@@ -272,57 +330,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/EventSubscriber/PictureSubscriber.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Picture.php" />
-        <option value="$PROJECT_DIR$/src/Migrations/Version20190718130246.php" />
-        <option value="$PROJECT_DIR$/templates/playlist_project/projectbyartist.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/PlaylistProjectController.php" />
-        <option value="$PROJECT_DIR$/templates/artist_band/artistbandprofile.html" />
-        <option value="$PROJECT_DIR$/templates/member/settings/profile.html.twig" />
-        <option value="$PROJECT_DIR$/config/packages/fos_user.yaml" />
-        <option value="$PROJECT_DIR$/src/Form/PlaylistType.php" />
-        <option value="$PROJECT_DIR$/tests/ControllerPlaylistProjectTest.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiFollowArtistBandController.php" />
-        <option value="$PROJECT_DIR$/src/Entity/ArtistBand.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Member.php" />
-        <option value="$PROJECT_DIR$/templates/artist_band/artistbandprofile.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/ArtistBandController.php" />
-        <option value="$PROJECT_DIR$/assets/js/viewtypeahead.js" />
-        <option value="$PROJECT_DIR$/.idea/dataSources/54fba18a-b0b4-40e4-a868-e32b36a957cb.xml" />
-        <option value="$PROJECT_DIR$/assets/js/artistbandprofile.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="/etc/php/7.2/cli/php.ini" />
-        <option value="$PROJECT_DIR$/tests/EntityPlaylistProjectTest.php" />
-        <option value="$PROJECT_DIR$/tests/EntityArtistBandTest.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiMemberController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiArticleController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiMusicFileController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiArtistBandController.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/tests/ApiArtistBandControllerTest.php" />
-        <option value="$PROJECT_DIR$/behat.yml.dist" />
-        <option value="$PROJECT_DIR$/tests/ControllerMemberTest.php" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/DataFixtures/MemberFIxtures.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/ORM/members-fixtures.yml" />
         <option value="$PROJECT_DIR$/src/DataFixtures/ORM/LoadMemberData.php" />
         <option value="$PROJECT_DIR$/tests/MemberTest.php" />
-        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/AbstractAliceFixture.php" />
-        <option value="$PROJECT_DIR$/src/DataFixtures/MemberFixtures.php" />
         <option value="$PROJECT_DIR$/tests/Form/FormMemberTest.php" />
         <option value="$PROJECT_DIR$/tests/AbstractWebTestCase.php" />
         <option value="$PROJECT_DIR$/tests/Controller/MemberControllerTest.php" />
-        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/assets/js/viewmember.js" />
-        <option value="$PROJECT_DIR$/assets/js/artistbandproject.js" />
         <option value="$PROJECT_DIR$/assets/js/login.js" />
         <option value="$PROJECT_DIR$/templates/security/login.html.twig" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/assets/js/register.js" />
         <option value="$PROJECT_DIR$/templates/security/register.html.twig" />
         <option value="$PROJECT_DIR$/tests/ApplicationAvailabilityFunctionalTest.php" />
         <option value="$PROJECT_DIR$/src/Controller/SecurityController.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ArtistBandFixtures.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/MemberFixtures.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/ArtistBandFixtures.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/artistbandcategory" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/MemberFixtures.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/artistmemberfixtures.yaml" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/artistbandfixtures.yaml" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/parameters.yaml" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/memberfixtures.yaml" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/AbstractAliceFixture.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/PlaylistProjectFixtures.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/playlistprojectfixtures.yaml" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ORM/musicfileplprojectfixtures.yaml" />
+        <option value="$PROJECT_DIR$/assets/js/settingsprofile_artist.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/templates/member/settings/profile_artist.html.twig" />
+        <option value="$PROJECT_DIR$/assets/js/viewmusicfile.js" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/templates/artist_band/projectbyartist.html.twig" />
+        <option value="$PROJECT_DIR$/src/Repository/PlaylistProjectRepository.php" />
+        <option value="$PROJECT_DIR$/templates/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiArtistBandController.php" />
+        <option value="$PROJECT_DIR$/assets/js/artistbandproject.js" />
+        <option value="$PROJECT_DIR$/assets/js/projectbyartist.js" />
+        <option value="$PROJECT_DIR$/templates/playlist_project/projectbyartist.html.twig" />
+        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiMemberController.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiMusicFileController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ArtistBandController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiPlaylistProjectController.php" />
+        <option value="$PROJECT_DIR$/assets/js/artistbandprofile.js" />
+        <option value="$PROJECT_DIR$/templates/artist_band/artistbandprofile.html.twig" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/PlaylistProjectController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/MemberController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Rest/ApiArticleController.php" />
       </list>
     </option>
   </component>
@@ -454,11 +512,13 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/theofidry/alice-data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/hautelook/alice-bundle" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="42" />
-    <option name="y" value="-11" />
+    <option name="x" value="360" />
+    <option name="y" value="305" />
     <option name="width" value="1559" />
     <option name="height" value="912" />
   </component>
@@ -483,34 +543,30 @@
             <path>
               <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="symfony" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="artist_band" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="playlist_project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="symfony" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -527,7 +583,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/DataFixtures/ORM" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -538,18 +594,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/DataFixtures/ORM" />
       <recent name="$PROJECT_DIR$/src/DataFixtures" />
       <recent name="$PROJECT_DIR$/src/EventSubscriber" />
       <recent name="$PROJECT_DIR$/templates/playlist_project" />
       <recent name="$PROJECT_DIR$/assets/css" />
-      <recent name="$PROJECT_DIR$/assets/js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/member/settings" />
       <recent name="$PROJECT_DIR$/src/DataFixtures/ORM" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/Migrations" />
       <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/uploads" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -564,17 +620,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ApplicationAvailabilityFunctionalTest.testPageIsSuccessful">
+  <component name="RunManager" selected="PHP Script.ArtistBandFixtures.php">
     <configuration name="ApplicationAvailabilityFunctionalTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Tests\ApplicationAvailabilityFunctionalTest" file="$PROJECT_DIR$/tests/ApplicationAvailabilityFunctionalTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="ApplicationAvailabilityFunctionalTest.testPageIsSuccessful" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Tests\ApplicationAvailabilityFunctionalTest" file="$PROJECT_DIR$/tests/ApplicationAvailabilityFunctionalTest.php" method="testPageIsSuccessful" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ControllerPlaylistProjectTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="App\Tests\ControllerPlaylistProjectTest" file="$PROJECT_DIR$/tests/ControllerPlaylistProjectTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="EntityPlaylistProjectTest.testPlaylistProjectDate" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -585,13 +637,16 @@
       <TestRunner directory="$PROJECT_DIR$/tests" />
       <method v="2" />
     </configuration>
+    <configuration name="ArtistBandFixtures.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/DataFixtures/ORM/ArtistBandFixtures.php">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.ArtistBandFixtures.php" />
         <item itemvalue="PHPUnit.ApplicationAvailabilityFunctionalTest.testPageIsSuccessful" />
         <item itemvalue="PHPUnit.tests" />
         <item itemvalue="PHPUnit.ApplicationAvailabilityFunctionalTest" />
         <item itemvalue="PHPUnit.EntityPlaylistProjectTest.testPlaylistProjectDate" />
-        <item itemvalue="PHPUnit.ControllerPlaylistProjectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -631,7 +686,19 @@
       <workItem from="1563659248129" duration="26298000" />
       <workItem from="1564001368104" duration="8780000" />
       <workItem from="1564477817366" duration="9632000" />
-      <workItem from="1564523375629" duration="46086000" />
+      <workItem from="1564523375629" duration="50603000" />
+      <workItem from="1564847821366" duration="9182000" />
+      <workItem from="1564953426275" duration="2050000" />
+      <workItem from="1564988253316" duration="34919000" />
+      <workItem from="1565250074058" duration="11171000" />
+      <workItem from="1565595696827" duration="1743000" />
+      <workItem from="1565685100725" duration="69000" />
+      <workItem from="1565815475008" duration="7728000" />
+      <workItem from="1565958643960" duration="656000" />
+      <workItem from="1566147257663" duration="1464000" />
+      <workItem from="1566303028175" duration="74000" />
+      <workItem from="1568065456836" duration="6626000" />
+      <workItem from="1569014342399" duration="63111000" />
     </task>
     <task id="LOCAL-00001" summary="push for project global">
       <created>1563902630829</created>
@@ -689,7 +756,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564687768280</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="clean up somme dead routes, repository, controller">
+      <created>1564778185284</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1564778185284</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -725,7 +799,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1671266000" />
+    <option name="totallyTimeSpent" value="1814576000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,7 +814,7 @@
     <frame x="55" y="25" width="1865" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49537894" visible="true" weight="0.20505773" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49537894" visible="true" weight="0.19461243" />
       <window_info id="Structure" order="1" sideWeight="0.5046211" side_tool="true" weight="0.15503024" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
@@ -753,7 +827,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" sideWeight="0.4997233" weight="0.32937366" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49917537" weight="0.32829374" />
       <window_info anchor="bottom" id="Favorites" order="10" weight="0.3297414" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4975261" weight="0.35529158" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4975261" weight="0.40928724" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5002749" side_tool="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49917537" weight="0.32829374" />
       <window_info anchor="bottom" id="TypeScript" order="14" />
@@ -763,30 +837,34 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.17372182" />
+      <window_info anchor="right" id="Database" order="3" weight="0.2517867" />
+      <window_info anchor="right" id="Mongo Explorer" order="4" weight="0.32985157" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974227" visible="true" weight="0.14843321" />
-      <window_info id="Structure" order="1" sideWeight="0.5025773" side_tool="true" weight="0.20383851" />
-      <window_info anchor="bottom" id="TypeScript" order="0" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.4997233" weight="0.3297414" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Favorites" order="11" weight="0.3297414" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.4986165" visible="true" weight="0.6174569" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5013835" side_tool="true" weight="0.5215517" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32904884" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49537894" visible="true" weight="0.21165475" />
+      <window_info id="Structure" order="1" sideWeight="0.5046211" side_tool="true" weight="0.15503024" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32937366" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" weight="0.3297414" />
+      <window_info anchor="bottom" id="Database Changes" order="8" sideWeight="0.4997233" weight="0.32937366" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49917537" weight="0.32829374" />
+      <window_info anchor="bottom" id="Favorites" order="10" weight="0.3297414" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4975261" visible="true" weight="0.20950323" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5002749" side_tool="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49917537" weight="0.32829374" />
+      <window_info anchor="bottom" id="TypeScript" order="14" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" sideWeight="0.49972513" weight="0.32937366" />
+      <window_info anchor="bottom" id="Messages" order="16" sideWeight="0.49972513" weight="0.32937366" />
+      <window_info anchor="bottom" id="SVN Repositories" order="17" sideWeight="0.49972513" weight="0.32937366" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.1891149" />
+      <window_info anchor="right" id="Database" order="3" weight="0.2517867" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -813,7 +891,8 @@
     <MESSAGE value="add others functional tests and install fixtures" />
     <MESSAGE value="nettoyage" />
     <MESSAGE value="clean up somme dead routes, repository, controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up somme dead routes, repository, controller" />
+    <MESSAGE value="new refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="new refactoring" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -834,285 +913,111 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/ArtistBandController.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/MusicFileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="1830">
+          <caret line="134" column="7" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="7" />
           <folding>
-            <element signature="e#34#60#0#PHP" expanded="true" />
+            <element signature="e#4384#4410#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiMemberController.php">
+    <entry file="file://$PROJECT_DIR$/src/DataFixtures/ORM/musicfileplprojectfixtures.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="59" />
-          <folding>
-            <element signature="e#38#52#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiMusicFileController.php">
+    <entry file="file://$PROJECT_DIR$/templates/member/settings/profile.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1548">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#39#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiArticleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/.phpunit/phpunit-6.5/src/Framework/Assert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17910">
-          <caret line="1253" column="50" selection-start-line="1253" selection-start-column="27" selection-end-line="1253" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ApiArtistBandControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="31" column="97" selection-start-line="31" selection-start-column="97" selection-end-line="31" selection-end-column="97" />
-          <folding>
-            <element signature="e#31#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Tools/SchemaTool.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ControllerMemberTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <element signature="e#30#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataFixtures/MemberFIxtures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding>
-            <element signature="e#8#30#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/behat.yml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle/Fixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFixtures/ORM/AbstractAliceFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#40#83#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFixtures/ORM/LoadMemberData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFixtures/ORM/members-fixtures.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiArtistBandController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="97" selection-start-line="97" selection-end-line="98" />
-          <folding>
-            <element signature="e#38#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/form/Test/TypeTestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/MemberTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/EntityArtistBandTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding>
-            <element signature="e#31#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ControllerPlaylistProjectTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="55" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/EntityPlaylistProjectTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#28#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Form/FormMemberTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="e#33#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/liip/functional-test-bundle/src/Test/WebTestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2364">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#304#355#0#PHP" expanded="true" />
-            <element signature="e#2315#3260#0#PHP" />
-            <element signature="e#3519#4722#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/playlist_project">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="ba193473-ea7c-43c2-bc3f-4d2dbe1570f8">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/member_artist_band">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="ba193473-ea7c-43c2-bc3f-4d2dbe1570f8">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/playlist">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="ba193473-ea7c-43c2-bc3f-4d2dbe1570f8">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/artist_band">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="ba193473-ea7c-43c2-bc3f-4d2dbe1570f8">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="21" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/MemberController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/artistBandregister.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="66" selection-start-line="66" selection-end-line="68" selection-end-column="65" />
+        <state relative-caret-position="-1562">
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/settingsprofileartist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3060">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/settingsprofile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/components/Autocomplete.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/components/ViewMusicFile.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/components/Hello.vue" />
+    <entry file="file://$PROJECT_DIR$/assets/js/components/VueProjectForm.vue" />
+    <entry file="file://$PROJECT_DIR$/assets/js/components/pere.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/components/fils3.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/components/fils.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/member/settings/profile_artist.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="844">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/settingsprofileartist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/viewmusicfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1126,74 +1031,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/viewmusicfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-265">
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+    <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/playlist_music_file">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="141357f6-3c15-46ab-ab07-97fb57066064">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/viewtypeahead.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+    <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/playlist">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="141357f6-3c15-46ab-ab07-97fb57066064">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/viewmember.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/artistbandproject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="19" selection-start-line="19" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+    <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/musicfile">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="141357f6-3c15-46ab-ab07-97fb57066064">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
     <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/member">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="ba193473-ea7c-43c2-bc3f-4d2dbe1570f8">
+        <state projectRestartId="a3ac7d47-bc45-4e6d-ad9b-a7c7f4151bc9">
           <filtering>
             <filter text="" />
           </filtering>
@@ -1204,86 +1071,247 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/register.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/DataFixtures/ORM/memberfixtures.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="118" selection-start-line="30" selection-start-column="118" selection-end-line="30" selection-end-column="118" />
+        <state relative-caret-position="28">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/PlaylistProjectRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiArtistBandController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="69" column="27" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/projectbyartist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
           <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Controller/MemberControllerTest.php">
+    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#42#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/MemberRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ApplicationAvailabilityFunctionalTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFixtures/MemberFixtures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="e#36#58#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="604">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        <state>
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/playlist_project/projectbyartist.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="20" column="62" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/artist_band">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="d22db758-aea9-419b-a718-2a695dda709e">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/artist_band/projectbyartist.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/artistbandproject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiMusicFileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1065">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ArticleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ArtistBandController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding>
+            <element signature="e#1980#2021#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/srcDevDebugProjectContainer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54fba18a-b0b4-40e4-a868-e32b36a957cb/database/rzikproject/schema/public/table/playlist_project">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="d22db758-aea9-419b-a718-2a695dda709e">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/PlaylistProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiPlaylistProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <element signature="e#39#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiMemberController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#38#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/artistbandprofile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/ArtistBand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/artist_band/artistbandprofile.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PlaylistProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#34#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/MemberController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-721">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#1331#1373#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/AbstractWebTestCase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        <state relative-caret-position="1233">
+          <caret line="149" column="9" lean-forward="true" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/security/Core/Encoder/UserPasswordEncoderInterface.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/Rest/ApiArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="129">
+          <caret line="136" column="9" lean-forward="true" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
           <folding>
-            <element signature="e#34#48#0#PHP" expanded="true" />
-            <element signature="e#2706#2735#1#PHP" expanded="true" />
-            <element signature="e#4573#4579#1#PHP" expanded="true" />
-            <element signature="e#4902#4908#1#PHP" expanded="true" />
-            <element signature="e#5516#5522#1#PHP" expanded="true" />
-            <element signature="e#7266#7272#1#PHP" expanded="true" />
-            <element signature="e#7724#7730#1#PHP" expanded="true" />
+            <element signature="e#39#64#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

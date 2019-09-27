@@ -38,11 +38,23 @@ class PlaylistProjectRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('p')
             ->join('p.artistbandplproject', 'ab', 'ab.id = p.artistbandplproject')
+//            ->where('p.dateCreated BETWEEN :date AND MAX(p.dateCreated)')
             ->where('p.dateCreated BETWEEN :date AND :now')
             ->orderBy('p.id', 'DESC')
             ->setParameter('date', $date)
             ->setParameter('now', new DateTime('now'))
             ->getQuery()
             ->getResult();
+    }
+
+    public function findNewestProject()
+    {
+        return $this->createQueryBuilder('p')
+            ->join('p.artistbandplproject', 'ab', 'ab.id = p.artistbandplproject')
+            ->orderBy('p.id', 'DESC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult();
+
     }
 }

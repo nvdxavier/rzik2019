@@ -12,19 +12,55 @@
             <div class="w-100"></div>
             <b-row>
                 <b-col>
+                    <b-img src="{{ asset('/rzik/'~projectByArtist.mainpictureplproject.picturefile) }}?image=41" fluid
+                           alt="Responsive image"></b-img>
+                </b-col>
+                <b-col>
                     <h2>{{ projectByArtist.plprojectname }}</h2>
                     by
                     <b-link href="{{ path('artistband_profile', { 'id' : projectByArtist.artistbandplproject.id}) }}">{{ projectByArtist.artistbandplproject.artistbandname }}</b-link>
-
-                </b-col>
-
-                <b-col>
-                    <b-img src="{{ asset('/rzik/'~projectByArtist.mainpictureplproject.picturefile) }}?image=41" fluid
-                           alt="Responsive image"></b-img>
+                    Date created: {{ projectByArtist.datecreateplproject|date('Y-m-d') }}
+                    <p>{{ projectByArtist.descriptionplproject }}</p>
                 </b-col>
                 </b-col>
             </b-row>
         </b-container>
+
+        <template>
+            <div class="container">
+                <div role="tablist">
+                    <div v-for="data in this.infos.data" class="currency">
+
+                        <b-card no-body class="col-lg-12">
+                            <b-card-header header-tag="header" class="col-lg-12" role="tab">
+                                <div class="">
+                                    <b-card-body>
+                                        <div v-for="(value, key) in data.musicfileplproject">
+                                            <b-card-text>
+                                                <b-button v-b-modal="'modal-' + value.id">
+                                                    ${value.filetitle}
+                                                </b-button>
+                                                <b-modal :id="'modal-' + value.id" :title="value.filetitle">
+                                                    <av-bars :audio-src="'https://localhost/rzik/' + value.filename">
+                                                        ${value.filename}
+                                                    </av-bars>
+                                                </b-modal>
+                                            </b-card-text>
+                                        </div>
+                                    </b-card-body>
+                                </div>
+
+                            </b-card-header>
+                            {#                            <div class="col-lg-4">#}
+                            {#                                ${data.descriptionplproject}#}
+                            {#                            </div>#}
+                        </b-card>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <dump :data="infos" label="The User 👨‍🎨"></dump>
+
     </div>
 {% endblock %}
 

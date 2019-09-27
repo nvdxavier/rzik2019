@@ -38,10 +38,11 @@ security:
   # Note: Only the *first* access control that matches will be used
   access_control:
     - { path: ^/welcome/, roles: [ROLE_ARTIST, ROLE_USER, ROLE_ADMIN]}
-    - { path: ^/settings/profile, roles: [ROLE_ARTIST, ROLE_USER, ROLE_ADMIN]}
+    - { path: ^/settings/my_profile, roles: [ROLE_USER, ROLE_ADMIN]}
+    - { path: ^/settings/my_profile/artist, roles: [ROLE_ARTIST, ROLE_USER, ROLE_ADMIN]}
     - { path: ^/reset_current/password, roles: [ROLE_ARTIST, ROLE_USER, ROLE_ADMIN]}
     - { path: ^/artist/band/register, roles: [ROLE_ARTIST, ROLE_ADMIN]}
     - { path: ^/artist/new/project, roles: [ROLE_ARTIST, ROLE_ADMIN]}
     - { path: ^/follow/artistband/$, roles: [ROLE_USER,ROLE_ARTIST, ROLE_ADMIN]}
-    - { path: ^/artistband/profile/, roles: [ROLE_USER,ROLE_ARTIST, ROLE_ADMIN]}
+    #    - { path: ^/artistband/profile/, roles: [ROLE_USER,ROLE_ARTIST, ROLE_ADMIN]}
     - { path: ^/music/acquisition, roles: [ROLE_USER,ROLE_ARTIST, ROLE_ADMIN]}

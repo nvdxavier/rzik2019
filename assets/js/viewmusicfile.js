@@ -1,15 +1,8 @@
 import Vue from 'vue'
 import ViewMusicFile from './components/ViewMusicFile'
-import Hello from './components/Hello'
 
 require('../css/app.css');
 
-// new Vue(
-//     {
-//         template: '<ViewMusicFile/>',
-//         components: { ViewMusicFile },
-//     }
-// ).$mount('#blockmusic');
 Vue.component('vuesuite', ViewMusicFile);
 
 new Vue({

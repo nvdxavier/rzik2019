@@ -1,0 +1,12 @@
+include:
+  - artistbandfixtures.yaml
+  - playlistprojectfixtures.yaml
+
+App\Entity\MusicFile:
+  music_{1..80}:
+    filename: 'music_<numberBetween(1, 6)>'
+    filedate: <date_create()>
+    filetitle: 'music_<numberBetween(1, 6)>'
+    fileartist: 'music_<numberBetween(1, 6)>'
+    filetransfertdate: <date_create()>
+    playlistproject: '@playlistproject_<numberBetween(1, 40)>'

@@ -36,8 +36,7 @@ class ApiArtistBandController extends AbstractFOSRestController
     public function getArtistBandProjectsAction(int $id)
     {
         $em = $this->getDoctrine()->getManager();
-        $projectsbyartist = $em->getRepository(PlaylistProject::class)->findBy(['artistbandplproject' => $id]);
-
+        $projectsbyartist = $em->getRepository(PlaylistProject::class)->findBy(['id' => $id]);
         if (!$projectsbyartist) {
             throw new EntityNotFoundException('project does not exist!');
 

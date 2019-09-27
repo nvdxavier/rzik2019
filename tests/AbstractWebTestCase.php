@@ -150,7 +150,8 @@ abstract class AbstractWebTestCase extends WebTestCase
         }
 
         $fixtures = static::getFixtures();
-        self::$fixturesReferenceRepository = $this->loadFixtures($fixtures)->getReferenceRepository();
+//        self::$fixturesReferenceRepository = $this->loadFixtures($fixtures)->getReferenceRepository();
+        self::$fixturesReferenceRepository = $this->getFixtures();
     }
 
     /**
@@ -211,4 +212,6 @@ abstract class AbstractWebTestCase extends WebTestCase
 
         return $this;
     }
+
+
 }

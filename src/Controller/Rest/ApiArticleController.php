@@ -4,19 +4,14 @@ namespace App\Controller\Rest;
 
 use App\Form\ArticleType;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use FOS\RestBundle\View\View;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-use FOS\RestBundle\FOSRestBundle;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Symfony\Component\HttpFoundation\Request;
-use Doctrine\DBAL\Schema\View;
 use App\Entity\Article;
-use App\Repository\ArticleRepository;
 use Symfony\Component\Serializer\SerializerInterface;
-use App\Entity\Tag;
 use App\Service\ApiService;
 
 class ApiArticleController extends AbstractFOSRestController
@@ -35,7 +30,7 @@ class ApiArticleController extends AbstractFOSRestController
         $em = $this->getDoctrine()->getManager();
         $article = $em->getRepository(Article::class)->find($articleId);
 
-        return \FOS\RestBundle\View\View::create($article, Response::HTTP_CREATED);
+        return View::create($article, Response::HTTP_CREATED);
     }
 
     /**
@@ -83,7 +78,7 @@ class ApiArticleController extends AbstractFOSRestController
             return $article;
         }
         // In case our PUT was a success we need to return a 200 HTTP OK response with the object as a result of PUT
-        return \FOS\RestBundle\View\View::create($article, Response::HTTP_OK);
+        return View::create($article, Response::HTTP_OK);
     }
 
     /**
@@ -123,7 +118,7 @@ class ApiArticleController extends AbstractFOSRestController
 
         /* @var $article Article */
         if (empty($article)) {
-            return \FOS\RestBundle\View\View::create(['message' => 'Article not found'], Response::HTTP_NOT_FOUND);
+            return View::create(['message' => 'Article not found'], Response::HTTP_NOT_FOUND);
         }
 
         $formArticle = $this->createForm(ArticleType::class, $article);

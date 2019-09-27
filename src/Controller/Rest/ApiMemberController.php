@@ -186,6 +186,10 @@ class ApiMemberController extends AbstractFOSRestController
         $member = $em->getRepository(Member::class)->find($iduser);
         $artistbandtofollow = $em->getRepository(ArtistBand::class)->find($id);
 
+        if (!$member) {
+            $response = View::create(['followartistbandstate' => false], Response::HTTP_NOT_FOUND);
+        }
+
         if ($member->getFollowartistband()->contains($artistbandtofollow) === true) {
             $response = View::create(['followartistbandstate' => false], Response::HTTP_OK);
         } else {

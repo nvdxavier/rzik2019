@@ -5,8 +5,8 @@
         <div>
             <b-card-group deck>
                 {% for monthlyproject in monthlyProjects %}
-
-                    <b-card title="{{ monthlyproject.artistbandplproject.artistbandname }}"
+                    {% set projectdId = monthlyproject.artistbandplproject.id %}
+                    <b-card title="{{ monthlyproject.plprojectname }}"
                             img-src="{{ asset('/rzik/'~monthlyproject.mainpictureplproject.picturefile) }}"
                             img-alt="{{ monthlyproject.artistbandplproject.artistbandname }}"
                             img-top>
@@ -14,13 +14,17 @@
                         <b-card-text>
                             {{ monthlyproject.descriptionplproject }}
                         </b-card-text>
-                        <b-link href="{{ path('project_byartist', { 'id' : monthlyproject.id}) }}">view more</b-link>
+                        <b-link href="{{ path('project_byartist', {'album': monthlyproject.plprojectname|lower, 'id' :   monthlyproject.id }) }}">
+                            view more
+                        </b-link>
 
                         <div slot="footer">
+                            {{ monthlyproject.id }}
+
                             <small class="text-muted">Last updated 3 mins ago</small>
                         </div>
                     </b-card>
-
+                    {#                    {{ monthlyproject.artistbandplproject.artistbandname }}#}
                 {% endfor %}
             </b-card-group>
         </div>

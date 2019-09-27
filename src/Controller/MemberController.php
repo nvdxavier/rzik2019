@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Article;
 use App\Form\ArticleType;
@@ -33,18 +32,34 @@ class MemberController extends AbstractController
         ]);
     }
 
-
     /**
-     * @Route("/settings/profile/", name="rzik_edit_profile")
+     * @Route("/settings/my_profile/artist", name="rzik_edit_profile_artist")
      */
-    public function editProfileAction()
+    public function editMyArtistProfilAction()
     {
         $user = ($this->getUser()) ? $this->getUser()->getId() : null;
 
-        return $this->render('member/settings/profile.html.twig', [
+        return $this->render('member/settings/profile_artist.html.twig', [
             'user' => $user,
             'datainfos' => null
         ]);
+    }
+
+    /**
+     * @Route("/settings/my_profile/", name="rzik_edit_profile")
+     */
+    public function editMyProfileAction()
+    {
+        $user = ($this->getUser()) ? $this->getUser()->getId() : null;
+
+        if (in_array('ROLE_ARTIST', $this->getUser()->getRoles())) {
+            return $this->redirect($this->generateUrl('rzik_edit_profile_artist'));
+        } else {
+            return $this->render('member/settings/profile.html.twig', [
+                'user' => $user,
+                'datainfos' => null
+            ]);
+        }
     }
 
     /**

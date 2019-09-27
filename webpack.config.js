@@ -20,6 +20,7 @@ Encore
     .addEntry('artistbandproject', './assets/js/artistbandproject.js')
     .addEntry('settingsprofile', './assets/js/settingsprofile.js')
     .addEntry('projectbyartist', './assets/js/projectbyartist.js')
+    .addEntry('settingsprofileartist', './assets/js/settingsprofileartist.js')
     .addEntry('home', './assets/js/home.js')
     .enableVueLoader()
     .enableSassLoader()

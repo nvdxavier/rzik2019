@@ -1,0 +1,13 @@
+include:
+  - artistbandfixtures.yaml
+
+App\Entity\PlaylistProject:
+  playlistproject_{1..40}:
+    artistbandplproject: '@artist_band_<numberBetween(1, 6)>'
+    plprojectname: <name()>
+    datecreateplproject: '<datetimeBetween("-30 years", "now")>'
+    descriptionplproject: '<text()>'
+    date_created: '<dateTimeBetween("-200 days", "now")>'
+
+
+

@@ -22,7 +22,8 @@ class ArtistBandController extends AbstractController
     public function homeAction(): Response
     {
         $em = $this->getDoctrine();
-        $monthlyProjects = $em->getRepository(PlaylistProject::class)->findMonthlyProjects(new \DateTime('last month'));
+//        $monthlyProjects = $em->getRepository(PlaylistProject::class)->findMonthlyProjects(new \DateTime('last month'));
+        $monthlyProjects = $em->getRepository(PlaylistProject::class)->findNewestProject();
         return $this->render('home.html.twig', ['monthlyProjects' => $monthlyProjects]);
     }
 
@@ -50,11 +51,13 @@ class ArtistBandController extends AbstractController
         $em = $this->getDoctrine();
 
         $artistprofile = $em->getRepository(ArtistBand::class)->find($id);
-        $userid = $this->getUser()->getId();
+        $logoband = $artistprofile->getArtistbandLogo()->first()->getPicturefile();
+        $userid = is_null($this->getUser()) ? null : $this->getUser()->getId();
 
         return $this->render('artist_band/artistbandprofile.html.twig', [
             'artistprofile' => $artistprofile,
-            'currentuserid' => $userid
+            'currentuserid' => $userid,
+            'logoband' => $logoband,
         ]);
     }
 

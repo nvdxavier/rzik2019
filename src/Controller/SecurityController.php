@@ -106,6 +106,7 @@ class SecurityController extends AbstractController
      */
     public function forgottenPassword(
         Request $request,
+        UserPasswordEncoderInterface $encoder,
         Swift_Mailer $mailer,
         TokenGeneratorInterface $tokenGenerator): Response
     {

@@ -4,13 +4,12 @@
     {% for userinfos in user %}
         {{ dump(userinfo) }}
     {% endfor %}
-
     <div id="artistproject">
         {% for projectid in projectbyuser %}
             <div id="bobo" :data-name="{{ projectid.id }}" ref="lol"></div>
         {% endfor %}
-        {#        <i>${ this.info }</i>#}
-        {#<dump :data="data.id" label="The User 👨‍🎨"></dump>#}
+        <i>${ this.info }</i>
+        <dump :data="data.id" label="The User 👨‍🎨"></dump>
 
         <template>
             <div class="container">

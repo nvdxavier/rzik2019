@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+{% block title %}Settings{% endblock %}
+
+{% block body %}
+    <div id="profil_artist" data-name="{{ user }}">
+        <div class="container-fluid">
+            {{ datainfos }}
+            <template>
+                <div>
+                    <b-card no-body>
+                        <b-tabs card>
+                            <b-tab no-body title="Account">
+                                <p></p>
+                                <div class="container-fluid">
+                                    <div class="col-lg-12">
+                                        <h3>Modify my account</h3>
+                                        <b-form inline>
+                                            <label class="sr-only" for="inline-form-input-name">Firstname</label>
+                                            <b-input
+                                                    id="inline-form-input-name"
+                                                    class="mb-2 mr-sm-2 mb-sm-0"
+                                                    v-model="firstname"
+                                                    :placeholder="this.infosuser.data.firstname"
+                                            ></b-input>
+
+                                            <label class="sr-only" for="inline-form-input-username">Lastname</label>
+                                            <b-input-group class="mb-2 mr-sm-2 mb-sm-0">
+                                                <b-input id="inline-form-input-username"
+                                                         v-model="lastname"
+                                                         :placeholder="this.infosuser.data.lastname"></b-input>
+                                            </b-input-group>
+
+                                            <b-button variant="primary" @click.prevent="patchMember">Update account
+                                            </b-button>
+                                        </b-form>
+                                    </div>
+                                </div>
+                                <p></p>
+                                <div class="container-fluid">
+                                    <div class="col-lg-12">
+                                        <h3>Password setting</h3>
+                                        {#<dump :data="this.infosuser.data" label="The User 👨‍🎨"></dump>#}
+                                        <form method="post">
+                                            <input type="hidden" :value="this.infosuser.data.email" name="email"
+                                                   id="inputEmail" class="form-control" placeholder="Email" required
+                                                   autofocus>
+                                            <label for="inputPassword" class="sr-only">Password</label>
+                                            <input type="password" name="password" id="inputPassword"
+                                                   class="mb-2 mr-sm-2 mb-sm-0" placeholder="your current Password"
+                                                   required>
+
+
+                                            <input type="hidden" name="_csrf_token"
+                                                   value="{{ csrf_token('authenticate') }}"
+                                            >
+                                            <p></p>
+                                            <button class="btn btn-lg btn-primary" type="submit">
+                                                Sign in
+                                            </button>
+                                        </form>
+                                        <template v-if="passwordform" id="passwordtemplate">
+                                            <form @submit.prevent="validateBeforeSubmit()">
+                                                <div class="input-group">
+                                                    <div class="input-fields">
+                                                        <input v-validate="'required'" name="password" type="password"
+                                                               class="form-control" placeholder="Password"
+                                                               ref="password">
+
+                                                        <input v-validate="'required|confirmed:password'"
+                                                               name="password_confirmation" v-model="password"
+                                                               type="password" class="form-control"
+                                                               placeholder="Password, Again" data-vv-as="password">
+                                                    </div>
+                                                </div>
+
+                                                <div class="alert alert-danger" v-show="errors.any()">
+                                                    <div v-if="errors.has('password')">
+                                                        ${ errors.first('password') }
+                                                    </div>
+                                                    <div v-if="errors.has('password_confirmation')">
+                                                        ${ errors.first('password_confirmation') }
+                                                    </div>
+                                                </div>
+
+                                                <button type="submit" class="btn btn-primary">
+                                                    Validate!
+                                                </button>
+                                            </form>
+                                            <b-modal ref="modal-message" hide-footer title="Using Component Methods">
+                                                <div class="d-block text-center">
+                                                    <h3>${messagetype}</h3>
+                                                </div>
+                                            </b-modal>
+                                        </template>
+                                    </div>
+                                </div>
+                                <p></p>
+                                <b-card-footer>Footer</b-card-footer>
+                            </b-tab>
+
+                            <b-tab no-body title="Projects">
+
+                                <div>
+                                    <b-button href="#" variant="primary">
+                                        <b-card
+                                                title="Card Title"
+                                                img-src="https://picsum.photos/600/300/?image=25"
+                                                img-alt="Image"
+                                                img-top
+                                                tag="article"
+                                                style="max-width: 20rem;"
+                                                class="mb-2"
+                                        >
+                                            <b-card-text>
+                                                Some quick example text to build on the card title and make up the bulk
+                                                of the card's content.
+                                            </b-card-text>
+
+
+                                        </b-card>
+                                    </b-button>
+                                </div>
+
+
+                                <b-card-footer>Picture 2 footer</b-card-footer>
+                            </b-tab>
+
+                            <b-tab no-body title="Payment">
+                                <b-card-img bottom src="https://picsum.photos/600/200/?image=26"></b-card-img>
+                                <b-card-footer>Picture 3 footer</b-card-footer>
+                            </b-tab>
+
+                            <b-tab title="Text">
+                                <b-card-title>This tab does not have the <code>no-body</code> prop set</b-card-title>
+                                <b-card-text>
+                                    Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla tempor.
+                                    Laborum
+                                    consequat non elit enim exercitation cillum aliqua consequat id aliqua. Esse ex
+                                    consectetur mollit voluptate est in duis laboris ad sit ipsum anim Lorem. Incididunt
+                                    veniam velit elit elit veniam Lorem aliqua quis ullamco deserunt sit enim elit
+                                    aliqua
+                                    esse irure.
+                                </b-card-text>
+                            </b-tab>
+                        </b-tabs>
+                    </b-card>
+                </div>
+            </template>
+        </div>
+    </div>
+{% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('build/settingsprofileartist.js') }}"></script>
+    {% endblock %}

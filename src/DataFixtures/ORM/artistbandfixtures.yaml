@@ -1,0 +1,70 @@
+include:
+  - memberfixtures.yaml
+
+App\Entity\ArtistBand:
+  artist_band_1:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@artist_1'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'rock'
+  artist_band_2:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@artist_2'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'new wave'
+  artist_band_3:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@artist_3'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'synthpop'
+  artist_band_4:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@artist_4'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'black-metal'
+  artist_band_5:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@artist_5'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'metal'
+  artist_band_6:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@artist_6'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'pop'

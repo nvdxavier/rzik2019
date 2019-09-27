@@ -35,9 +35,9 @@ new Vue({
             this.$modal.hide('hello-world');
         }
     },
-
     mounted() {
         this.project = this.url + this.paramValue;
+        // console.log(this.project);
         axios.get(this.project)
             .then(response => (this.info = response))
         ;

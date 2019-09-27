@@ -1,19 +1,58 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+
     <div id="artistbandprofile" data-name="{{ artistprofile.id }}" data-currentuser="{{ currentuserid }}">
-        {{ artistprofile.id }}
-        {{ artistprofile.artistbandname }}
-        {{ artistprofile.artistbanddescription }}
-        {{ artistprofile.artistbanddateceation|date('d-m-y') }}
-        {{ artistprofile.artistbandcity }}
-        {{ artistprofile.artistbandcategory }}
-        <b-button id="popover-button-sync" v-bind:variant="followstate" v-on:click="patchfollowstate">
-            ${followbuttontext}
-        </b-button>
-        <b-popover :show.sync="showpopover" target="popover-button-sync" :title="followartistmessage">
-            ${followartistmessage}
-        </b-popover>
+
+        <div class="container">
+            <b-img src="{{ asset('/rzik/'~logoband) }}?image=21" fluid alt="Fluid image">ici</b-img>
+            {#            {{ artistprofile.id }}#}
+            <b-container fluid>
+                <b-row class="text-center">
+                    <b-col md="8" class="py-4">
+                        {{ artistprofile.artistbanddescription }}
+                    </b-col>
+                    <b-col md="4" class="py-4">
+                        <h3>{{ artistprofile.artistbandname }}</h3>
+                        <b-button id="popover-button-sync" v-bind:variant="followstate" v-on:click="patchfollowstate">
+                            ${followbuttontext}
+                        </b-button>
+                        {{ artistprofile.artistbanddateceation|date('d-m-y') }}
+                        {{ artistprofile.artistbandcity }}
+                        {{ artistprofile.artistbandcountry }}
+                        <p>Category:{{ artistprofile.artistbandcategory }}</p>
+                    </b-col>
+                </b-row>
+            </b-container>
+            <b-popover :show.sync="showpopover" target="popover-button-sync" :title="followartistmessage">
+                ${followartistmessage}
+            </b-popover>
+            <b-modal ref="my-modal" hide-footer title="Want to follow this band ?">
+                <div class="d-block text-cenforter">
+                    <p>${connectionmessage}</p>
+                </div>
+                <b-button class="mt-3" variant="outline-success" block href="{{ path('app_login') }}">Login</b-button>
+                <b-button class="mt-2" variant="outline-warning" block href="{{ path('app_register') }}">Register
+                </b-button>
+            </b-modal>
+
+            <b-container fluid class="p-4 bg-dark">
+                <div v-for="project of projectsofusercollection">
+                    <b-row class="text-center">
+                        <b-col md="3" class="py-3">
+                            <b-link v-bind:href="root+'/'+project.plprojectname+'/'+project.id">
+                                <b-img thumbnail fluid
+                                       v-bind:src="root+'/rzik/'+project.mainpictureplproject.picturefile"
+                                       alt="Image 3"></b-img>
+                                <p>${project.plprojectname}</p>
+                            </b-link>
+                        </b-col>
+                    </b-row>
+                </div>
+
+            </b-container>
+        </div>
     </div>
+
 {% endblock %}
     {% block javascripts %}
         {{ parent() }}
