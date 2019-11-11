@@ -1,7 +1,6 @@
 <?php
 namespace App\Tests;
 
-use App\Entity\ArtistBand;
 use App\Entity\PlaylistProject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Bridge\PhpUnit;

@@ -63,7 +63,7 @@ class PlaylistProject
     private $musicfileplproject;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\ArtistBand", inversedBy="artistbandproject")
+     * @ORM\ManyToOne(targetEntity="App\Entity\ArtistBand", inversedBy="artistbandproject", cascade={"remove", "persist"})
      */
     private $artistbandplproject;
 

@@ -58,6 +58,10 @@ class PlaylistProjectController extends AbstractController
 
         $artistBand = $em->getRepository(ArtistBand::class)->findBy(['artistbandmember' => $this->getUser()->getId()]);
 
+        if (!$artistBand) {
+
+        }
+        $resultartistband = $artistBand ? $artistBand[0] : null;
 
         if ($formProject->isSubmitted() && $formProject->isValid()) {
             $event = new GenericEvent($newProject, [$request->files->get('playlist_project'), $artistBand[0]->getArtistbandName()]);
@@ -67,13 +71,14 @@ class PlaylistProjectController extends AbstractController
             $em->persist($newProject);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('artistband_profile', array('id' => $this->getUser()->getId())));
+            return $this->redirect($this->generateUrl('project_byartist', ['album' => strtolower($newProject->getPlprojectname()),
+                'id' => $newProject->getId()]));
 
         }
 
         return $this->render('playlist_project/newproject.html.twig', [
             'formProject' => $formProject->createView(),
-            'artistBand' => $artistBand[0],
+            'artistBand' => $resultartistband,
         ]);
     }
 

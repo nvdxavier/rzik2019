@@ -27,7 +27,8 @@ class PictureType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('picturefile', FileType::class, ['label' => 'add a picture',
+            ->add('picturefile', FileType::class, [
+//                'label' => 'add a picture',
 //                                                             'data_class' => null,
 //                                                             'by_reference' => false,
 //                                                             'multiple' =>true,

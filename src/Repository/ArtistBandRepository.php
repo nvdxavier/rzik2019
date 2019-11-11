@@ -31,9 +31,11 @@ class ArtistBandRepository extends ServiceEntityRepository
             ->setParameter('cityname', '%' . strtolower($cityname) . '%')
             ->getQuery()
             ->getResult();
-
     }
 
+    /**
+     * @return mixed
+     */
     public function findByLatestProject()
     {
         return $this->createQueryBuilder('ab')
@@ -41,10 +43,8 @@ class ArtistBandRepository extends ServiceEntityRepository
             ->join('ab.artistbandproject', 'project')
             ->addSelect('project')
             ->orderBy('project.datecreateplproject', 'DESC')
-//            ->setMaxResults(1)
             ->getQuery()
             ->getResult();
-
     }
 
 }

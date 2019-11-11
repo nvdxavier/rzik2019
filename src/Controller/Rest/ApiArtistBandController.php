@@ -1,19 +1,17 @@
 <?php
 namespace App\Controller\Rest;
 
-use App\Repository\ArtistBandRepository;
 use Doctrine\ORM\EntityNotFoundException;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
-use phpDocumentor\Reflection\DocBlock\Tags\Throws;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use FOS\RestBundle\Controller\Annotations as Rest;
-use Symfony\Component\Security\Core\Security;
-use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use FOS\RestBundle\View\View;
 use App\Entity\PlaylistProject;
 use App\Entity\ArtistBand;
+use App\Repository\ArtistBandRepository;
+
 
 class ApiArtistBandController extends AbstractFOSRestController
 {
@@ -36,7 +34,7 @@ class ApiArtistBandController extends AbstractFOSRestController
     public function getArtistBandProjectsAction(int $id)
     {
         $em = $this->getDoctrine()->getManager();
-        $projectsbyartist = $em->getRepository(PlaylistProject::class)->findBy(['id' => $id]);
+        $projectsbyartist = $em->getRepository(PlaylistProject::class)->find($id);
         if (!$projectsbyartist) {
             throw new EntityNotFoundException('project does not exist!');
 
@@ -47,7 +45,7 @@ class ApiArtistBandController extends AbstractFOSRestController
     /**
      * @Rest\Get("/artistband/{id}", requirements={"id": "\d+"}, name="api_artistband")
      * @param int $id
-     * @return Response
+     * @Rest\View
      */
     public function getArtistBand(int $id)
     {
@@ -56,8 +54,14 @@ class ApiArtistBandController extends AbstractFOSRestController
         if (!$artistband) {
             throw new EntityNotFoundException('this Artistband does not exist!');
         }
-        return $this->handleView($this->view($artistband));
+        $view = View::create($artistband);
+        $view->setFormat('json');
+
+        // Gestion de la réponse
+        return $view;
+
     }
+
 
     /**
      * @Rest\Post("/post/artistband/{id}", requirements={"id": "\d+"}, name="api_post_artistband")
@@ -87,7 +91,6 @@ class ApiArtistBandController extends AbstractFOSRestController
     {
         return $this->updateArtistBand($id);
     }
-
 
     private function updateArtistBand(int $id)
     {

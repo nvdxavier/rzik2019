@@ -7,17 +7,21 @@ use DateTimeInterface;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use phpDocumentor\Reflection\Types\Self_;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PlaylistRepository")
  */
 class Playlist
 {
+
     /**
      * @var ArrayCollection
-     * @ORM\OneToOne(targetEntity="Member", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="App\Entity\Member", inversedBy="playlist", cascade={"remove", "persist"})
      */
-    protected $member;
+    private $member;
+
+
     /**
      * @var ArrayCollection
      * @ORM\ManyToMany(targetEntity="MusicFile", cascade={"persist"})
@@ -54,6 +58,7 @@ class Playlist
     public function __construct()
     {
         $this->musicfile = new ArrayCollection();
+        $this->member = new ArrayCollection();
         $this->datecreatepl = new DateTime('NOW');
     }
 
@@ -163,5 +168,4 @@ class Playlist
 
         return $this;
     }
-
 }

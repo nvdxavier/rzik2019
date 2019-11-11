@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\MemberRepository")
  */
@@ -24,7 +24,9 @@ class Member implements UserInterface
      */
     private $id;
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=180, unique=false)
+     * @Assert\NotBlank
+     * @Assert\Email(strict=true, message="Le format de l'email est incorrect")
      */
     private $email;
     /**
@@ -34,6 +36,8 @@ class Member implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Assert\NotBlank
+     * @Assert\Regex("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*$³°?*()@%&~]).{8,20}$/")
      */
     private $password;
     /**
@@ -59,12 +63,18 @@ class Member implements UserInterface
      */
     protected $followartistband;
 
+    /**
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="App\Entity\Playlist", mappedBy="member", cascade={"remove", "persist"})
+     */
+    private $playlist;
 
     public function __construct()
     {
         $this->article = new ArrayCollection();
         $this->memberpicture = new ArrayCollection();
         $this->followartistband = new ArrayCollection();
+        $this->playlist = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -282,5 +292,36 @@ class Member implements UserInterface
     public function removeFollow(ArtistBand $followartistband)
     {
         $this->followartistband->removeElement($followartistband);
+    }
+
+    /**
+     * @return Collection|Playlist[]
+     */
+    public function getPlaylist(): Collection
+    {
+        return $this->playlist;
+    }
+
+    public function addPlaylist(Playlist $playlist): self
+    {
+        if (!$this->playlist->contains($playlist)) {
+            $this->playlist[] = $playlist;
+            $playlist->setMember($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlaylist(Playlist $playlist): self
+    {
+        if ($this->playlist->contains($playlist)) {
+            $this->playlist->removeElement($playlist);
+            // set the owning side to null (unless already changed)
+            if ($playlist->getMember() === $this) {
+                $playlist->setMember(null);
+            }
+        }
+
+        return $this;
     }
 }

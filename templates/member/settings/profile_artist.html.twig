@@ -98,29 +98,31 @@
                                 <b-card-footer>Footer</b-card-footer>
                             </b-tab>
 
-                            <b-tab no-body title="Projects">
-
-                                <div>
-                                    <b-button href="#" variant="primary">
-                                        <b-card
-                                                title="Card Title"
-                                                img-src="https://picsum.photos/600/300/?image=25"
-                                                img-alt="Image"
-                                                img-top
-                                                tag="article"
-                                                style="max-width: 20rem;"
-                                                class="mb-2"
-                                        >
-                                            <b-card-text>
-                                                Some quick example text to build on the card title and make up the bulk
-                                                of the card's content.
-                                            </b-card-text>
-
-
-                                        </b-card>
-                                    </b-button>
+                            <b-tab no-body title="My projects">
+                                <div v-if="myprojects">
+                                    <div v-for="project in myprojects" class="">
+                                        {#<dump :data="project" label="myprojects👨‍🎨"></dump>#}
+                                        <b-button v-bind:href="root+'/'+project.plprojectname +'/'+ project.id"
+                                                  variant="primary">
+                                            <b-card
+                                                    title="data.picturename"
+                                                    v-bind:img-src="root + '/rzik/'+project.mainpictureplproject.picturefile"
+                                                    img-alt="data.picturename"
+                                                    img-top
+                                                    tag="data.picturename"
+                                                    style="max-width: 15rem;"
+                                                    class="mb-2">
+                                                <b-card-text>
+                                                    <p style="color: rgba(15,31,13,0.99)">${project.plprojectname}</p>
+                                                </b-card-text>
+                                            </b-card>
+                                        </b-button>
+                                    </div>
                                 </div>
-
+                                <div v-else>
+                                    <p>You don't have any project yet</p>
+                                    <a href="{{ path('artist_new_project') }}">Create a new project ?</a>
+                                </div>
 
                                 <b-card-footer>Picture 2 footer</b-card-footer>
                             </b-tab>

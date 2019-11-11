@@ -37,28 +37,28 @@ class Picture
     private $picturecategory = [];
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Member", inversedBy="memberpicture")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Member", inversedBy="memberpicture", cascade={"remove", "persist"})
      */
     private $memberowner;
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\ArtistBand", inversedBy="artistbandpicture")
+     * @ORM\ManyToOne(targetEntity="App\Entity\ArtistBand", inversedBy="artistbandpicture", cascade={"remove", "persist"})
      */
     private $pictureartistband;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\ArtistBand", inversedBy="artistbandlogo")
+     * @ORM\ManyToOne(targetEntity="App\Entity\ArtistBand", inversedBy="artistbandlogo", cascade={"remove", "persist"})
      */
     private $logoartistband;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\PlaylistProject", inversedBy="picturesplproject")
+     * @ORM\ManyToOne(targetEntity="App\Entity\PlaylistProject", inversedBy="picturesplproject", cascade={"remove", "persist"})
      */
     private $playlistproject;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\PlaylistProject", inversedBy="imgplprojectowner")
+     * @ORM\ManyToOne(targetEntity="App\Entity\PlaylistProject", inversedBy="imgplprojectowner", cascade={"remove", "persist"})
      */
     private $plprojectowner;
 

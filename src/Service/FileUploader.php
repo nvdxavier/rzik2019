@@ -53,7 +53,6 @@ class FileUploader
 
         $projectdir = isset($project) ? '/' . $this->toolbox->formatString($project) : null;
         $filepath = $this->getTargetDirectory() . '/' . $this->toolbox->formatString($artistbandName) . $projectdir . '/' . $directory[0];
-
         try {
             if (!is_dir($filepath)) {
                 $filesystem->mkdir($filepath, 0777);

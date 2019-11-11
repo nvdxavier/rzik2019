@@ -4,22 +4,6 @@
 
 {% block body %}
     <div id="blockmember">
-        {#{% if formArticle is not null %}#}
-
-        {#<div>#}
-        {#<b-button v-b-modal.modal-1>Créer une news</b-button>#}
-
-        {#<!-- Modal Component -->#}
-        {#<b-modal id="modal-1" title="BootstrapVue">#}
-        {#<p class="my-4">#}
-        {#{{ form_start(formArticle) }}#}
-        {#{{ form_rest(formArticle) }}#}
-        {#{{ form_end(formArticle) }}#}
-        {#</p>#}
-        {#</b-modal>#}
-        {#</div>#}
-        {#{% endif %}#}
-
         <form id="app" v-on:submit.prevent="buttonClicked" method="post">
             <p>
                 <label for="title">title</label>

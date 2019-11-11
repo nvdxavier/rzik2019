@@ -1,11 +1,11 @@
 include:
-  - memberfixtures.yaml
+  - Memberfixtures.yaml
 
 App\Entity\ArtistBand:
   artist_band_1:
     artistbandname: <name()>
     artistbanddescription: <text()>
-    artistbandmember: '@artist_1'
+    artistbandmember: '@member1'
     artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
     artistbandfacebook: 'https://www.facebook.com/<name()>'
     artistbandtwitter: 'https://twitter.com/<name()>'
@@ -16,7 +16,7 @@ App\Entity\ArtistBand:
   artist_band_2:
     artistbandname: <name()>
     artistbanddescription: <text()>
-    artistbandmember: '@artist_2'
+    artistbandmember: '@member2'
     artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
     artistbandfacebook: 'https://www.facebook.com/<name()>'
     artistbandtwitter: 'https://twitter.com/<name()>'
@@ -27,7 +27,7 @@ App\Entity\ArtistBand:
   artist_band_3:
     artistbandname: <name()>
     artistbanddescription: <text()>
-    artistbandmember: '@artist_3'
+    artistbandmember: '@member3'
     artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
     artistbandfacebook: 'https://www.facebook.com/<name()>'
     artistbandtwitter: 'https://twitter.com/<name()>'
@@ -38,7 +38,7 @@ App\Entity\ArtistBand:
   artist_band_4:
     artistbandname: <name()>
     artistbanddescription: <text()>
-    artistbandmember: '@artist_4'
+    artistbandmember: '@member4'
     artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
     artistbandfacebook: 'https://www.facebook.com/<name()>'
     artistbandtwitter: 'https://twitter.com/<name()>'
@@ -49,7 +49,7 @@ App\Entity\ArtistBand:
   artist_band_5:
     artistbandname: <name()>
     artistbanddescription: <text()>
-    artistbandmember: '@artist_5'
+    artistbandmember: '@member5'
     artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
     artistbandfacebook: 'https://www.facebook.com/<name()>'
     artistbandtwitter: 'https://twitter.com/<name()>'
@@ -60,7 +60,7 @@ App\Entity\ArtistBand:
   artist_band_6:
     artistbandname: <name()>
     artistbanddescription: <text()>
-    artistbandmember: '@artist_6'
+    artistbandmember: '@member6'
     artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
     artistbandfacebook: 'https://www.facebook.com/<name()>'
     artistbandtwitter: 'https://twitter.com/<name()>'
@@ -68,3 +68,135 @@ App\Entity\ArtistBand:
     artistbandcountry: <stateAbbr()>
     artistbandcity: <city()>
     artistbandcategory: 'pop'
+  artist_band_7:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member7'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'glam'
+  artist_band_8:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member8'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'pop'
+  artist_band_9:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member9'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'pop'
+  artist_band_10:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member10'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'classical'
+  artist_band_11:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member11'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'word mussic'
+  artist_band_12:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member12'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'experimental'
+  artist_band_13:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member13'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'experimental'
+  artist_band_14:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member14'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'pop-rock'
+  artist_band_15:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member15'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'indies'
+  artist_band_16:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member16'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'jazz'
+  artist_band_17:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member17'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'death-metal'
+  artist_band_18:
+    artistbandname: <name()>
+    artistbanddescription: <text()>
+    artistbandmember: '@member18'
+    artistbanddateceation:  '<datetimeBetween("-20 years", "now")>'
+    artistbandfacebook: 'https://www.facebook.com/<name()>'
+    artistbandtwitter: 'https://twitter.com/<name()>'
+    artistbandinstagram: 'https://instagram.com/<name()>'
+    artistbandcountry: <stateAbbr()>
+    artistbandcity: <city()>
+    artistbandcategory: 'black-metal'

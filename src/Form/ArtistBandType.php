@@ -28,20 +28,20 @@ class ArtistBandType extends AbstractType
             ->add('artistbandtwitter', UrlType::class)
             ->add('artistbandlogo', CollectionType::class, [
                 'entry_type' => PictureType::class,
-                'entry_options' => ['label' => true],
+                'entry_options' => ['label' => 'Le Logo de votre Groupe'],
                 'allow_add' => true,
                 'allow_delete' => true,
                 'prototype' => true,
                 'by_reference' => false,
                 'attr' => ['class' => 'container',
-                    'required' => false]
+                    'required' => true]
             ])
             ->add('artistbandcountry', CountryType::class)
             ->add('artistbandcity', TextType::class)
             ->add('artistbandcategory', TextType::class)
             ->add('artistbandpicture', CollectionType::class, [
                 'entry_type' => PictureType::class,
-                'entry_options' => ['label' => true],
+                'entry_options' => ['label' => 'Sélectionner une photos de votre groupe'],
                 'allow_add' => true,
                 'allow_delete' => true,
                 'prototype' => true,

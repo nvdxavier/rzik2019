@@ -1,0 +1,127 @@
+App\Entity\Member:
+  member1:
+    firstname: 'Jean-Michel'
+    lastname: 'Lanvin'
+    email: 'blanvin@gmail.com'
+    roles: ['ROLE_ARTIST']
+    password: 'Jmichel@1989'
+  member2:
+    firstname: 'Jean-gabin'
+    lastname: 'Okbobo'
+    email: 'okbobo@voila.com'
+    roles: ['ROLE_ARTIST']
+    password: 'Jgabin@1988'
+  member3:
+    firstname: 'Sergio'
+    lastname: 'Leone'
+    email: sergioleone@voila.com
+    roles: ['ROLE_ARTIST']
+    password: 'SLeone#1978'
+  member4:
+    firstname: 'Gene'
+    lastname: 'simmons'
+    email: 'kiss@yahoo.com'
+    roles: ['ROLE_ARTIST']
+    password: 'Gsimmons!@1245'
+  member5:
+    firstname: 'Martin'
+    lastname: 'Gore'
+    email: 'martingore@voila.com'
+    roles: ['ROLE_ARTIST']
+    password: 'DepecheMode@1989'
+  member6:
+    firstname: 'Suzumu'
+    lastname: 'Hirasawa'
+    email: 'suzumu@gmail.com'
+    roles: ['ROLE_ARTIST']
+    password: 'SuzumuH@1978'
+  member7:
+    firstname: 'john'
+    lastname: 'dooddy'
+    email: 'zotomog@xymox.com'
+    roles: ['ROLE_ARTIST']
+    password: 'User@2345'
+  member8:
+    firstname: 'adder'
+    lastname: 'black'
+    email: 'gorgoroth@alice.fr'
+    roles: ['ROLE_ARTIST']
+    password: 'User@2345'
+  member9:
+    firstname: 'peter'
+    lastname: 'steele'
+    email: 'carcass@alice.fr'
+    roles: ['ROLE_ARTIST']
+    password: 'User@2345'
+  member10:
+    firstname: 'food'
+    lastname: 'formtunary'
+    email: 'foodform@caramail.com'
+    roles: ['ROLE_ARTIST']
+    password: 'User@2345'
+  member11:
+    firstname: 'mecha'
+    lastname: 'godzilla'
+    email: 'mecha@tokyo.it'
+    roles: ['ROLE_ARTIST']
+    password: 'User@2345'
+  member12:
+    firstname: 'dark'
+    lastname: 'plagueis'
+    email: 'darkattack@gmail.com'
+    roles: ['ROLE_ARTIST']
+    password: 'user'
+  member13:
+    firstname: 'attica'
+    lastname: 'angelis'
+    email: 'atticak@gmail.com'
+    roles: ['ROLE_ARTIST']
+    password: 'user'
+  member14:
+    firstname: 'laxeandre'
+    lastname: 'scp'
+    email: 'laxeandre@gmail.com'
+    roles: ['ROLE_ARTIST']
+    password: 'user'
+  member15:
+    firstname: 'jojo'
+    lastname: 'bizarre'
+    email: 'jojobizarre@gmail.fr'
+    roles: ['ROLE_ARTIST']
+    password: 'user'
+  member16:
+    firstname: 'ovni'
+    lastname: 'raeliene'
+    email: 'rael@hotmail.fr'
+    roles: ['ROLE_ARTIST']
+    password: 'user'
+  member17:
+    firstname: 'shoouff'
+    lastname: 'arabe'
+    email: 'shouffo@hotmail.fr'
+    roles: ['ROLE_ARTIST']
+    password: 'user'
+  member18:
+    firstname: 'irlande'
+    lastname: 'odonnel'
+    email: 'gaelic@yahoo.ir'
+    roles: ['ROLE_ARTIST']
+    password: 'user'
+  member19:
+    firstname: 'admin'
+    lastname: 'admin'
+    email: 'admin@hotmail.com'
+    roles: ['ROLE_ADMIN']
+    password: 'adminP@ssw20'
+  member20:
+    firstname: 'simple'
+    lastname: 'user'
+    email: 'simpleuser@hotmail.com'
+    roles: ['ROLE_USER']
+    password: 'userP@ssw20'
+  member{21..60}:
+    firstname: <firstNameFemale()>
+    lastname: <lastName()>
+    email: '<email()>'
+    roles: ['ROLE_USER']
+    password: 'user'

@@ -61,4 +61,25 @@ class PlaylistRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    /**
+     * @param $plmusic
+     * @param $member
+     * @param $mfid
+     * @return mixed
+     */
+    public function findMusicInPlayliste($plmusic, $member, $mfid)
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.id = :plmusic')
+            ->andWhere('p.member = :member')
+            ->join('p.musicfile', 'mf')
+            ->addSelect('mf')
+            ->andWhere('mf.id = :mfid')
+            ->setParameter('plmusic', $plmusic)
+            ->setParameter('member', $member)
+            ->setParameter('mfid', $mfid)
+            ->getQuery()
+            ->getResult();
+    }
 }

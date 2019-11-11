@@ -35,8 +35,8 @@ class MusicFileSubscriber implements EventSubscriberInterface
     {
         $musicCollection = $event->getIterator()->current();
 
-        $artistbandName = $event->getArguments()[1];
-        $projectname = $event->getSubject()->getPlprojectname();
+        $artistbandName = $this->toolbox->formatString($event->getArguments()[1]);
+        $projectname = $this->toolbox->formatString($event->getSubject()->getPlprojectname());
         $entitiesmusic = $event->getSubject()->getMusicfilePlproject();
         $directoryhandler = $this->uploader->directoryHandler($artistbandName, MUSIC_FILE, $projectname);
         $i = 1;
@@ -45,7 +45,7 @@ class MusicFileSubscriber implements EventSubscriberInterface
         foreach ($musicCollection['musicfileplproject'] as &$entitymusic) {
 
             $musicpath = $artistbandName . '/' .
-                $this->toolbox->formatString($projectname) . '/' .
+                $projectname . '/' .
                 MUSIC_FILE[0] . '/' .
                 $entitymusic['filename']->getClientOriginalName();
 

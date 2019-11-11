@@ -1,0 +1,32 @@
+include:
+  #  - artistbandfixtures.yaml
+  - playlistprojectfixtures.yaml
+
+App\Entity\Picture:
+  # les photos du groupe(1 à plusieurs photos pour un groupe)
+  pictureband_{1..18}:
+    picturecategory: ['PICTURE_BAND']
+    pictureartistband: '@artist_band_<current()>'
+    picturename: 'picturebandfixture<numberBetween(1, 15)>.jpg'
+    picturefile: 'artistbandfixture/PICTURE_BAND_fixtures/picturebandfixture<numberBetween(1, 18)>.jpg'
+
+  # le logo du groupe(un logo par groupe)
+  pictureartistbandlogo_{1..18}:
+    picturecategory: ['LOGO_BAND']
+    logoartistband: '@artist_band_<current()>'
+    picturename: 'imagefixture<numberBetween(1, 18)>.jpg'
+    picturefile: 'artistbandfixture/LOGO_BAND_fixtures/logofixture<numberBetween(1, 7)>.jpg'
+
+  # artwork par album(jaquettes, pochettes,etc..)
+  pictureartistbandproject_{1..120}:
+    picturecategory: ['PICTURE_PROJECT']
+    plprojectowner: '@playlistproject_<numberBetween(1, 40)>'
+    picturename: 'picturebandfixture<numberBetween(1, 25)>.jpg'
+    picturefile: 'artistbandfixture/artistprojectfixture/PICTURE_PROJECT_fixtures/imagefixture<numberBetween(1, 20)>.jpg'
+
+  # artwork principale de l'album(un artwork par groupe)
+  mainpictureartistbandproject_{1..40}:
+    picturecategory: ['PICTURE_PROJECT_MAIN']
+    plprojectowner: '@playlistproject_<numberBetween(1, 40)>'
+    picturename: 'picturebandfixture<numberBetween(1, 25)>.jpg'
+    picturefile: 'artistbandfixture/artistprojectfixture/PICTURE_PROJECT_fixtures/imagefixture<numberBetween(1, 20)>.jpg'

@@ -95,7 +95,6 @@ new Vue({
             axios.get(this.projectsofuserurl + this.getartistbandid)
                 .then((response) => {
                     this.projectsofusercollection = response.data;
-                    console.log(this.projectsofusercollection);
                 })
                 .catch((error) => {
                     console.log(error);

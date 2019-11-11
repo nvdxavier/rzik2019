@@ -51,7 +51,8 @@ class ArtistBandController extends AbstractController
         $em = $this->getDoctrine();
 
         $artistprofile = $em->getRepository(ArtistBand::class)->find($id);
-        $logoband = $artistprofile->getArtistbandLogo()->first()->getPicturefile();
+        $logoband = $artistprofile->getArtistbandLogo()->first()->getPictureFile();
+
         $userid = is_null($this->getUser()) ? null : $this->getUser()->getId();
 
         return $this->render('artist_band/artistbandprofile.html.twig', [

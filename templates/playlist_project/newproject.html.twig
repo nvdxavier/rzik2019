@@ -3,20 +3,23 @@
 {% block title %}Project Controller!{% endblock %}
 
 {% block body %}
-    <h1>CREATION OF YOUR PROJECT</h1>
+    <h1>CREATION OF YOUR Musical Band</h1>
     <p></p>
 
-    <h2>your actual artist/band name</h2>
-    <div>{{ artistBand.artistbandname }}</div>
-    <div>{{ artistBand.artistbanddescription }}</div>
-    <div>{{ artistBand.artistbanddateceation|date("d/m/Y") }}</div>
-    <div>{{ artistBand.artistbandfacebook }}</div>
-    <div>{{ artistBand.artistbandtwitter }}</div>
-    <div>{{ artistBand.artistbandinstagram }}</div>
-    <div>{{ artistBand.artistbandcountry }}</div>
-    <div>{{ artistBand.artistbandcity }}</div>
-    <div>{{ artistBand.artistbandcategory }}</div>
-
+    {% if artistBand is not null %}
+        <h2>your actual artist/band name</h2>
+        <div>{{ artistBand.artistbandname }}</div>
+        <div>{{ artistBand.artistbanddescription }}</div>
+        <div>{{ artistBand.artistbanddateceation|date("d/m/Y") }}</div>
+        <div>{{ artistBand.artistbandfacebook }}</div>
+        <div>{{ artistBand.artistbandtwitter }}</div>
+        <div>{{ artistBand.artistbandinstagram }}</div>
+        <div>{{ artistBand.artistbandcountry }}</div>
+        <div>{{ artistBand.artistbandcity }}</div>
+        <div>{{ artistBand.artistbandcategory }}</div>
+    {% else %}
+        <h2>You don't have any artist/band yet</h2>
+    {% endif %}
     <p></p>
     <div id="newprojectform">
         <div class="container-fluid">

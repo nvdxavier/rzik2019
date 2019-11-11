@@ -2,10 +2,8 @@
 
 namespace App\Controller\Rest;
 
-use App\Entity\Member;
 use App\Form\MusicFileType;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use FOS\RestBundle\Controller\Annotations as FOSRest;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\MusicFile;
@@ -15,11 +13,8 @@ use FOS\RestBundle\Routing\ClassResourceInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
-// * @FOSRest\NamePrefix("app_musicfile_api")
-
 /**
  * Class ProjectController.
- *
  * @FOSRest\RouteResource("ApiMusicFile",pluralize=false)
  */
 class ApiMusicFileController extends AbstractFOSRestController implements ClassResourceInterface
@@ -54,42 +49,6 @@ class ApiMusicFileController extends AbstractFOSRestController implements ClassR
         return $musicfile;
     }
 
-    /**
-     * @FOSRest\Post("/music", name="post_music", methods="GET|POST")
-     */
-    public function postMusicAction(Request $request)
-    {
-//        $musicfile = new MusicFile();
-//
-//        $fileName = $request->request->get('filename');
-//        $filetitle = $request->request->get('filetitle');
-//        $fileNameUploaded = $fileUploader->upload($fileName);
-//        $musicfile->setFilename($fileNameUploaded);
-
-//        $musicfile->setFiledate(new \DateTime("now"));
-
-
-//        if($formMusicFile->isSubmitted() && $formMusicFile->isValid())
-//        {
-//            //$musicfile->setFileartist($request->request->get(''));
-//            //$musicfile->setDuration($request->request->get(''));
-//            $musicfile->setFileartist($request->request->get('artist'));
-//            //$musicfile->setFilecategory($request->request->get(''));
-//
-//            $em = $this->getDoctrine()->getManager();
-//            $em->persist($musicfile);
-//            $em->flush();
-//
-//            return new JsonResponse(
-//                [
-//                    'status' => 'ok',
-//                ],
-//                JsonResponse::HTTP_CREATED
-//            );
-//        }
-
-
-    }
 
     /**
      * @FOSRest\Put("/modifymusic/{id}",  methods={"PUT"})
@@ -98,7 +57,9 @@ class ApiMusicFileController extends AbstractFOSRestController implements ClassR
      */
     public function updateMusicFileAction(Request $request)
     {
-        $musicfile = $this->get('doctrine.orm.entity_manager')
+        $em = $this->getDoctrine()->getManager();
+
+        $musicfile = $em
             ->getRepository(MusicFile::class)
             ->find($request->get('id')); // L'identifiant en tant que paramètre n'est plus nécessaire
 
@@ -130,7 +91,7 @@ class ApiMusicFileController extends AbstractFOSRestController implements ClassR
      */
     public function removeNewMusicFileAction(Request $request)
     {
-        $em = $this->get('doctrine.orm.entity_manager');
+        $em = $this->getDoctrine()->getManager();
         $musicfile = $em->getRepository(MusicFile::class)
             ->find($request->get('id'));
         /* @var $musicfile MusicFile */

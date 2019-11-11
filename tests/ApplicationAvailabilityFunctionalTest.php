@@ -5,7 +5,6 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class ApplicationAvailabilityFunctionalTest extends WebTestCase
 {
-    // SMOKE TESTING
 
     /**
      * assert that url rendering a page and some datas or visuals contents for user then assert true

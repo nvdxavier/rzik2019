@@ -5,7 +5,7 @@
         <b-container class="bv-example-row">
             <b-row>
                 <b-col>
-                    <b-img src="{{ asset('/rzik/'~logoband) }}" fluid alt="Responsive image"></b-img>
+                    {#                    <b-img src="{{ asset('/rzik/'~logoband) }}" fluid alt="Responsive image"></b-img>#}
                 </b-col>
             </b-row>
             <p></p>
@@ -28,39 +28,102 @@
 
         <template>
             <div class="container">
+
                 <div role="tablist">
-                    <div v-for="data in this.infos.data" class="currency">
+                    <b-card no-body class="col-lg-12">
+                        <b-card-header header-tag="header" class="col-lg-12" role="tab">
 
-                        <b-card no-body class="col-lg-12">
-                            <b-card-header header-tag="header" class="col-lg-12" role="tab">
-                                <div class="">
-                                    <b-card-body>
-                                        <div v-for="(value, key) in data.musicfileplproject">
-                                            <b-card-text>
-                                                <b-button v-b-modal="'modal-' + value.id">
-                                                    ${value.filetitle}
-                                                </b-button>
-                                                <b-modal :id="'modal-' + value.id" :title="value.filetitle">
-                                                    <av-bars :audio-src="'https://localhost/rzik/' + value.filename">
-                                                        ${value.filename}
-                                                    </av-bars>
-                                                </b-modal>
-                                            </b-card-text>
-                                        </div>
-                                    </b-card-body>
+                            {#                            {% for project in projectByArtist.musicfilePlproject %}#}
+                            {#                                <b-card-body>#}
+                            {#                                        <b-card-text>#}
+                            {#                                            <b-button v-b-modal.modal-{{ project.id }}>#}
+                            {#                                                {{project.filetitle}}#}
+                            {#                                            </b-button>#}
+                            {#                                            <b-modal id="modal-{{ project.id }}" title="{{ project.filetitle }}">#}
+                            {#                                                <av-bars audio-src="https://localhost/rzik/{{ project.filename }}">#}
+                            {#                                                    {{ project.filename }}#}
+                            {#                                                </av-bars>#}
+                            {#                                            </b-modal>#}
+                            {#                                        </b-card-text>#}
+                            {#                                </b-card-body>#}
+                            {#                            {% endfor %}#}
+                            <b-modal ref="playlists-modal" hide-footer title="playlist">
+                                <div v-for="datamusic in currentplaylist" class="">
+                                    <form :id="'checkbox-' + datamusic.id"
+                                          v-on:change.prevent="addmusictoplaylist(datamusic.id)" method="post">
+                                        <input :id="'checkbox-' + datamusic.id" v-model="selectedplaylist"
+                                               type="checkbox" :value="datamusic.id" :name="datamusic.plname">
+                                        <label :for="'checkbox-' + datamusic.id">${datamusic.plname}</label>
+                                        <input hidden type="text" v-model="musicid" value="musicid">
+                                    </form>
+                                    <div :id="'statusmessage-'+datamusic.id"
+                                         :v-on.stop="checkmusicinplaylist(musicid, datamusic.id)">
+                                    </div>
                                 </div>
+                                <hr>
+                                <div>
+                                    <b-button v-b-toggle.collapse-a>Create a new playlist</b-button>
 
-                            </b-card-header>
-                            {#                            <div class="col-lg-4">#}
-                            {#                                ${data.descriptionplproject}#}
-                            {#                            </div>#}
-                        </b-card>
-                    </div>
+                                    <b-collapse id="collapse-a" class="mt-2">
+                                        <b-card>
+                                            <form id="app" v-on:submit.prevent="checkForm" method="post">
+                                                <p v-if="errors.length">
+                                                    <b>Please correct the following error(s):</b>
+                                                <ul>
+                                                    <li v-for="error in errors">${ error }</li>
+                                                </ul>
+                                                </p>
+
+                                                <label for="name">Playlist name</label>
+                                                <input id="name" v-model="name" type="text" name="name">
+                                                <input hidden type="text" v-model="musicid" value="musicid">
+                                                <input type="submit" value="Submit">
+                                            </form>
+                                            <div variant="success">${modalmessage}</div>
+                                        </b-card>
+                                    </b-collapse>
+                                </div>
+                            </b-modal>
+                            <b-modal ref="message-modal" hide-footer title="message">
+                                <p>${modalmessage}</p>
+                                <ul>
+                                    <li>
+                                        <b-link v-bind:href="modalmessagelogin">Login</b-link>
+                                        or
+                                        <b-link v-bind:href="modalmessageregister">Register</b-link>
+                                    </li>
+                                </ul>
+                            </b-modal>
+                            <div v-for="data in this.infos" class="">
+                                <b-card-body>
+                                    <div v-for="musics in data.musicfileplproject">
+                                        <b-card-text>
+                                            <b-button v-b-modal="'modal-' + musics.id">
+                                                ${musics.filetitle}
+                                            </b-button>
+
+                                            <b-button :id="musics.id" @click.prevent="addToPlaylist(musics.id)"
+                                                      variant="danger">Add
+                                            </b-button>
+
+                                            <b-modal :id="'modal-' + musics.id" :title="musics.filetitle">
+                                                <av-bars :audio-src="'https://localhost/rzik/' + musics.filename">
+                                                    ${musics.filename}
+                                                </av-bars>
+                                            </b-modal>
+                                        </b-card-text>
+                                    </div>
+                                </b-card-body>
+                                <div class="col-lg-4">
+                                    ${data.descriptionplproject}
+                                </div>
+                            </div>
+                        </b-card-header>
+                    </b-card>
+                    {#        <dump :data="infos" label="The User 👨‍🎨"></dump>#}
                 </div>
             </div>
         </template>
-        <dump :data="infos" label="The User 👨‍🎨"></dump>
-
     </div>
 {% endblock %}
 

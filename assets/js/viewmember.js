@@ -20,7 +20,6 @@ new Vue({
         tag: '',
         tagged: '',
         url: "https://localhost/api/post_article"
-        // url: "{{ path('api_post_article') }}"
     },
     methods: {
         showModal() {

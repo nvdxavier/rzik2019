@@ -69,7 +69,7 @@ class MusicFile
     private $filetransfertdate;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\PlaylistProject", inversedBy="musicfileplproject")
+     * @ORM\ManyToOne(targetEntity="App\Entity\PlaylistProject", inversedBy="musicfileplproject", cascade={"remove", "persist"})
      */
     private $playlistproject;
 

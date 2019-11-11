@@ -1,12 +1,13 @@
 include:
-  - artistbandfixtures.yaml
+  #  - artistbandfixtures.yaml
   - playlistprojectfixtures.yaml
 
 App\Entity\MusicFile:
-  music_{1..80}:
-    filename: 'music_<numberBetween(1, 6)>'
-    filedate: <date_create()>
-    filetitle: 'music_<numberBetween(1, 6)>'
-    fileartist: 'music_<numberBetween(1, 6)>'
-    filetransfertdate: <date_create()>
+  music_{1..200}:
     playlistproject: '@playlistproject_<numberBetween(1, 40)>'
+    filename: 'artistbandfixture/artistprojectfixture/MUSIC_FILE/music_sample<numberBetween(1, 103)>.mp3'
+    filedate: <date_create()>
+    filetitle: 'music_<current()>'
+    fileartist: 'music_<current()>'
+    filetransfertdate: <date_create()>
+    fileposition: '<numberBetween(1, 12)>'

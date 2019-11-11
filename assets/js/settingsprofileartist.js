@@ -16,6 +16,7 @@ new Vue({
         getmember: 'https://' + window.location.hostname + '/api/member/',
         patchmember: 'https://' + window.location.hostname + '/api/update/member/',
         patchpasswordroute: 'https://' + window.location.hostname + '/api/update/password/',
+        getmyprojects: 'https://' + window.location.hostname + '/api/projectsowner',
         tokenmember: (new URL(document.location)).searchParams.get('token'),
         getmemberid: '',
         firstname: '',
@@ -26,6 +27,8 @@ new Vue({
         passwordform: false,
         password: '',
         messagetype: null,
+        myprojects: '',
+        root: 'https://' + window.location.hostname
     },
     beforeMount() {
         this.getmemberid = this.$el.attributes['data-name'].value;
@@ -38,7 +41,7 @@ new Vue({
         ;
     },
     mounted() {
-        console.log(this.tokenmember);
+        this.getprojectsowner();
         if (this.tokenmember) {
             this.passwordform = true;
         }
@@ -104,6 +107,15 @@ new Vue({
             // We pass the ID of the button that we want to return focus to
             // when the modal has hidden
             this.$refs['modal-message'].toggle('#toggle-btn')
+        },
+        getprojectsowner: function () {
+            axios.get(this.getmyprojects)
+                .then((response) => {
+                    this.myprojects = response.data;
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         }
     },
 });

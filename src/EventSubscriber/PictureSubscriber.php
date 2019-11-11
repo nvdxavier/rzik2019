@@ -42,7 +42,7 @@ class PictureSubscriber implements EventSubscriberInterface
     public function onArtistBandRegistratedPicture(GenericEvent $event)
     {
         $picturesCollection = $event->getIterator()->current();
-        $artistbandName = $event->getArguments()[1];
+        $artistbandName = $this->toolbox->formatString($event->getArguments()[1]);
 
         foreach ($event->getSubject()->getArtistbandPicture() as &$value) {
 
@@ -53,28 +53,23 @@ class PictureSubscriber implements EventSubscriberInterface
             $value->setPictureCategory(PICTURE_BAND);
             $value->setPicturename($filepicture->getClientOriginalName());
 
-            if ($directoryhandler != false) {
-
                 $finalpath = $artistbandName . '/' . PICTURE_BAND[0] . '/' . $filepicture->getClientOriginalName();
                 $value->setPicturefile($finalpath);
                 $this->uploader->upload($filepicture, $directoryhandler);
-            }
         }
 
-        foreach ($event->getSubject()->getArtistbandLogo() as &$value) {
+        foreach ($event->getSubject()->getArtistbandLogo() as &$valueArtistbandLogo) {
 
             $filelogo = $picturesCollection['artistbandlogo']['__name__']['picturefile'];
             $directoryhandler = $this->uploader->directoryHandler($artistbandName, LOGO_BAND);
 
-            $value->setLogoArtistband($event->getSubject());
-            $value->setPictureCategory(LOGO_BAND);
-            $value->setPicturename($filelogo->getClientOriginalName());
-            if ($directoryhandler != false) {
+            $valueArtistbandLogo->setLogoArtistband($event->getSubject());
+            $valueArtistbandLogo->setPictureCategory(LOGO_BAND);
+            $valueArtistbandLogo->setPicturename($filelogo->getClientOriginalName());
 
                 $finalpath = $artistbandName . '/' . LOGO_BAND[0] . '/' . $filelogo->getClientOriginalName();
-                $value->setPicturefile($finalpath);
+            $valueArtistbandLogo->setPicturefile($finalpath);
                 $this->uploader->upload($filelogo, $directoryhandler);
-            }
         }
 
     }
@@ -86,7 +81,7 @@ class PictureSubscriber implements EventSubscriberInterface
     {
 
         //c'est le nom du groupe
-        $artistbandName = $event->getArguments()[1];
+        $artistbandName = $this->toolbox->formatString($event->getArguments()[1]);
 
         //c'est l'image principle de l'album
         $mainprojectpicture = $event->getArguments()[0]['mainpictureplproject'];
@@ -98,18 +93,17 @@ class PictureSubscriber implements EventSubscriberInterface
         $entitypictures = $event->getSubject()->getPicturesPlproject();
 
         //c'est le nom de l'album
-        $projectname = $event->getSubject()->getPlprojectname();
+        $projectname = $this->toolbox->formatString($event->getSubject()->getPlprojectname());
         $directoryhandler = $this->uploader->directoryHandler($artistbandName, PICTURE_PROJECT, $projectname);
 
         if ($mainprojectpicture) {
 
             $mainpicturepath = $artistbandName . '/' .
-                $this->toolbox->formatString($projectname) . '/' .
+                $projectname . '/' .
                 PICTURE_PROJECT[0] . '/' .
                 $mainprojectpicture['picturefile']->getClientOriginalName();
 
             $this->uploader->upload($mainprojectpicture['picturefile'], $directoryhandler);
-
             $entitymainpicture = $event->getSubject()->getMainpicturePlproject();
             $entitymainpicture->setPictureCategory(PICTURE_PROJECT_MAIN);
             $entitymainpicture->setPicturename($mainprojectpicture['picturefile']->getClientOriginalName());
@@ -121,7 +115,7 @@ class PictureSubscriber implements EventSubscriberInterface
             $i = 1;
             foreach ($pictures as &$picturefile) {
                 $picturespath = $artistbandName . '/' .
-                    $this->toolbox->formatString($projectname) . '/' .
+                    $projectname . '/' .
                     PICTURE_PROJECT[0] . '/' .
                     $picturefile['picturefile']->getClientOriginalName();
 

@@ -1,6 +1,4 @@
 <?php
-
-
 namespace App\DataFixtures\ORM;
 
 
@@ -10,6 +8,8 @@ class PlaylistProjectFixtures extends AbstractAliceFixture
     {
         return [
             __DIR__ . '/playlistprojectfixtures.yaml',
+            __DIR__ . '/artistbandfixtures.yaml',
+
         ];
     }
 
