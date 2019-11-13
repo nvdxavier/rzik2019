@@ -35,7 +35,6 @@ class ApplicationAvailabilityFunctionalTest extends WebTestCase
         return array(
             array('/login'),
             array('/forgottenPassword'),
-            array('/home'),
             array('/register'),
             array('/create/article'),
             array('/playlist'),

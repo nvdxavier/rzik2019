@@ -9,7 +9,7 @@ use Symfony\Component\Form\Test\TypeTestCase;
 
 class FormMemberTest extends TypeTestCase
 {
-    public function testValidMemberDatas(): void
+    public function testValidPlaylistData(): void
     {
         $member = $this->createMember();
         $formData = [

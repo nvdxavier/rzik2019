@@ -22,4 +22,5 @@ class EntityPlaylistProjectTest extends TestCase
         $this->assertObjectHasAttribute('artistbandplproject', $artistNewProject);
     }
 
+
 }
